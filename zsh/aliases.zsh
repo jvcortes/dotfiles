@@ -1,0 +1,29 @@
+alias cp="cp -i"                                                # Confirm before overwriting something
+alias df='df -h'                                                # Human-readable sizes
+alias free='free -m'                                            # Show sizes in MB
+alias gitu='git add . && git commit && git push'
+alias ga='git add'
+alias gcom='git commit'
+alias gpus='git push'
+alias v='nvim'
+alias vim='nvim'
+alias ls='lsd'
+alias lsf='/usr/bin/ls'
+alias em='emacs -nw'
+alias mus='bash Scripts/music.sh'
+alias neo='neomutt'
+alias cm='chmod'
+alias ran='ranger'
+alias urlview='urlscan'
+alias mdkir='mkdir'
+alias setwalcol='set_wallpaper_and_colorscheme'
+alias lf='lf.sh'
+
+alias pacin='sudo pacman -S'
+alias pacre='sudo pacman -R'
+alias pacsyn='sudo pacman -Syy'
+alias pacup='sudo pacman -Syyu'
+alias pacse='sudo pacman -Qs'
+
+alias doc='docker-compose'
+alias docup='docker-compose up'
