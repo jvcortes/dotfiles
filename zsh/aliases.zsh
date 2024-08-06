@@ -5,8 +5,12 @@ alias gitu='git add . && git commit && git push'
 alias ga='git add'
 alias gcom='git commit'
 alias gpus='git push'
+
 alias v='nvim'
 alias vim='nvim'
+alias vi='nvim'
+alias nv='nvim'
+
 alias ls='lsd'
 alias lsf='/usr/bin/ls'
 alias em='emacs -nw'
@@ -17,13 +21,8 @@ alias ran='ranger'
 alias urlview='urlscan'
 alias mdkir='mkdir'
 alias setwalcol='set_wallpaper_and_colorscheme'
-alias lf='lf.sh'
-
-alias pacin='sudo pacman -S'
-alias pacre='sudo pacman -R'
-alias pacsyn='sudo pacman -Syy'
-alias pacup='sudo pacman -Syyu'
-alias pacse='sudo pacman -Qs'
+alias python="python3"
+alias pip="pip3"
 
 alias doc='docker-compose'
 alias docup='docker-compose up'
