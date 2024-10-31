@@ -22,7 +22,7 @@
 ;; accept. For example:
 ;;
 (setq doom-font (font-spec :family "Source Code Pro" :size 13)
-   doom-variable-pitch-font (font-spec :family "Source Sans 3" :size 13))
+      doom-variable-pitch-font (font-spec :family "Source Sans 3" :size 13))
 ;;
 ;; If you or Emacs can't find your font, use 'M-x describe-font' to look them
 ;; up, `M-x eval-region' to execute elisp code, and 'M-x doom/reload-font' to
@@ -84,14 +84,21 @@
 (setq org-hide-emphasis-markers t)
 (setq org-pretty-entities t)
 (setq org-ellipsis "  ·")
-
 (setq org-src-fontify-natively t)
 (setq org-src-tab-acts-natively t)
 (setq org-edit-src-content-indentation 0)
+(setq org-startup-with-latex-preview t)
+(setq org-hidden-keywords '(title author email))
+(setq org-startup-with-inline-images t)
+(setq org-hide-drawer-startup nil)
+(setq org-cycle-hide-drawer-startup t)
+(setq line-spacing 2)
 
 ;; -> packages
 
-(use-package org-modern
+(use-package! org-modern
+  :commands (org-modern-mode)
+  :hook     (org-mode . org-modern-mode)
   :config
   (setq
    org-auto-align-tags t
@@ -101,15 +108,75 @@
    org-insert-heading-respect-content t
 
    ;; Don't style the following
+   org-modern-list nil
    org-modern-tag nil
    org-modern-priority nil
    org-modern-todo nil
    org-modern-table nil))
 
+(use-package! org-appear
+  :commands (org-appear-mode)
+  :hook     (org-mode . org-appear-mode)
+  :config
+  (setq org-hide-emphasis-markers t)  ;; Must be activated for org-appear to work
+  (setq org-appear-autoemphasis   t)   ;; Show bold, italics, verbatim, etc.
+  (setq org-appear-autolinks      t)   ;; Show links
+  (setq org-appear-autosubmarkers t)) ;; Show sub- and superscripts
+
+(use-package! org-padding
+  :commands (org-padding-mode)
+  :hook     (org-mode . org-padding-mode)
+  :config
+  (setq org-padding-heading-padding-alist
+        '((3.0 . 1.5) (2.8 . 1.2) (3.0 . 0.5) (3.0 . 0.5) (2.5 . 0.5) (2.0 . 0.5) (1.5 . 0.5) (0.5 . 0.5))))
+
+(use-package! org-tidy
+  :commands (org-tidy-mode)
+  :hook (org-mode . org-tidy-mode))
+
+(use-package! org-superstar
+  :commands (org-superstar-mode)
+  :hook (org-mode . org-superstar-mode)
+  :config
+  (setq org-superstar-prettify-item-bullets t)
+  (setq org-superstar-item-bullet-alist
+        '((?* . ?◈)
+          (?+ . ?⚬)
+          (?- . ?•))))
+
 ;; -> hooks
 
+(defun set-org-faces ()
+  (dolist (face '((org-level-1 . 1.35)
+                  (org-level-2 . 1.3)
+                  (org-level-3 . 1.2)
+                  (org-level-4 . 1.1)
+                  (org-level-5 . 1.1)
+                  (org-level-6 . 1.1)
+                  (org-level-7 . 1.1)
+                  (org-level-8 . 1.1)
+                  (org-document-title . 1.8)
+                  ))
+    (set-face-attribute (car face) nil :weight 'bold :height (cdr face))))
+
+(defun org-hide-line-numbers ()
+  (setq display-line-numbers nil))
+
+(defun my/org-fold-custom-blocks ()
+  "Fold specified custom blocks (e.g., `warning`, `note`, `info`)
+   in the current Org buffer."
+  (save-excursion
+    (goto-char (point-min))
+    (let ((block-types '("warning" "note" "info"))) ; List of block types to fold
+      (dolist (block block-types)
+        (while (re-search-forward (format "#\\+begin_%s" block) nil t)
+          (org-fold-hide-block-toggle t))))))
+
+;; Hook to apply custom block faces after loading an org file
+(add-hook! 'org-mode-hook #'org-hide-line-numbers)
+(add-hook! 'org-mode-hook #'set-org-faces)
 (add-hook! 'org-mode-hook #'writeroom-mode)
-(add-hook! 'org-mode-hook #'org-modern-mode)
+(add-hook! 'org-mode-hook 'my/org-fold-custom-blocks)
 
 ;; -- global key mappings
 (map! :leader :desc "Open Doom Emacs configuration folder" "ce" (cmd! (dired "~/.config/doom")))
