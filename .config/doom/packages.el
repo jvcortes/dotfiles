@@ -55,6 +55,4 @@
 (package! org-appear :recipe (:host github :repo "awth13/org-appear"))
 (package! org-padding :recipe (:host github :repo "TonCherAmi/org-padding"))
 (package! org-tidy)
-(package! olivetti)
-(package! mixed-pitch)
 (package! org-superstar)

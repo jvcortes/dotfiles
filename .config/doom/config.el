@@ -75,6 +75,10 @@
 ;; they are implemented.
 ;;
 
+;; -- global settings
+;;
+;; -> packages
+
 
 ;; -- org mode
 ;; -> settings
@@ -92,7 +96,9 @@
 (setq org-startup-with-inline-images t)
 (setq org-hide-drawer-startup nil)
 (setq org-cycle-hide-drawer-startup t)
-(setq line-spacing 2)
+(setq line-spacing 0.2)
+(setq org-id-link-to-org-use-id t)
+
 
 ;; -> packages
 
@@ -144,39 +150,55 @@
           (?+ . ?⚬)
           (?- . ?•))))
 
-;; -> hooks
+(use-package! org-roam
+  :ensure t
+  :custom
+  (org-roam-directory (file-truename "~/Dropbox/Notes.org/"))
+  :config
+  ;; If you're using a vertical completion framework, you might want a more informative completion interface
+  (org-roam-db-autosync-mode)
+  (setq org-roam-node-display-template #("${doom-hierarchy:120} ${doom-type}" 20 30
+                                         (face font-lock-keyword-face)))
 
-(defun set-org-faces ()
-  (dolist (face '((org-level-1 . 1.35)
-                  (org-level-2 . 1.3)
-                  (org-level-3 . 1.2)
-                  (org-level-4 . 1.1)
-                  (org-level-5 . 1.1)
-                  (org-level-6 . 1.1)
-                  (org-level-7 . 1.1)
-                  (org-level-8 . 1.1)
-                  (org-document-title . 1.8)
-                  ))
-    (set-face-attribute (car face) nil :weight 'bold :height (cdr face))))
+        ;; If using org-roam-protocol
+        (require 'org-roam-protocol))
 
-(defun org-hide-line-numbers ()
-  (setq display-line-numbers nil))
+  ;; -> hooks
 
-(defun my/org-fold-custom-blocks ()
-  "Fold specified custom blocks (e.g., `warning`, `note`, `info`)
+  (defun set-org-faces ()
+    (dolist (face '((org-level-1 . 1.35)
+                    (org-level-2 . 1.3)
+                    (org-level-3 . 1.2)
+                    (org-level-4 . 1.1)
+                    (org-level-5 . 1.1)
+                    (org-level-6 . 1.1)
+                    (org-level-7 . 1.1)
+                    (org-level-8 . 1.1)
+                    (org-document-title . 1.8)
+                    ))
+      (set-face-attribute (car face) nil :weight 'bold :height (cdr face))))
+
+  (defun org-hide-line-numbers ()
+    (setq display-line-numbers nil))
+
+  (defun my/org-fold-custom-blocks ()
+    "Fold specified custom blocks (e.g., `warning`, `note`, `info`)
    in the current Org buffer."
-  (save-excursion
-    (goto-char (point-min))
-    (let ((block-types '("warning" "note" "info"))) ; List of block types to fold
-      (dolist (block block-types)
-        (while (re-search-forward (format "#\\+begin_%s" block) nil t)
-          (org-fold-hide-block-toggle t))))))
+    (save-excursion
+      (goto-char (point-min))
+      (let ((block-types '("warning" "note" "info"))) ; List of block types to fold
+        (dolist (block block-types)
+          (while (re-search-forward (format "#\\+begin_%s" block) nil t)
+            (org-fold-hide-block-toggle t))))))
 
-;; Hook to apply custom block faces after loading an org file
-(add-hook! 'org-mode-hook #'org-hide-line-numbers)
-(add-hook! 'org-mode-hook #'set-org-faces)
-(add-hook! 'org-mode-hook #'writeroom-mode)
-(add-hook! 'org-mode-hook 'my/org-fold-custom-blocks)
+  (add-hook! 'org-mode-hook #'org-hide-line-numbers)
+  (add-hook! 'org-mode-hook #'set-org-faces)
+  (add-hook! 'org-mode-hook #'writeroom-mode)
+  (add-hook! 'org-mode-hook 'my/org-fold-custom-blocks)
 
-;; -- global key mappings
-(map! :leader :desc "Open Doom Emacs configuration folder" "ce" (cmd! (dired "~/.config/doom")))
+  ;; -> Capture templates
+  (setq org-capture-templates
+        '(("n" "Note")))
+
+  ;; -- global key mappings
+  (map! :leader :desc "Open Doom Emacs configuration folder" "ce" (cmd! (dired "~/.config/doom")))
