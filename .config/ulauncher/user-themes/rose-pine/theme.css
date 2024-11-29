@@ -1,0 +1,95 @@
+/**
+ * App Window
+ */
+@define-color bg_color #1f1d2e; /* Dark background */
+@define-color window_bg @bg_color;
+@define-color window_border_color #232136; /* Dark violet border */
+@define-color prefs_background #9ccfd8; /* Light blue for preferences background */
+
+/**
+ * Input
+ */
+@define-color selected_bg_color #f28c4d; /* Highlight color (rose pine accent) */
+@define-color selected_fg_color #232136; /* Dark violet text */
+@define-color input_color #c0c0c0; /* Soft gray for input text */
+@define-color caret_color darker(@input_color); /* Slightly darker caret color */
+
+/**
+ * Result items
+ */
+@define-color item_name #c0c0c0; /* Soft gray item name */
+@define-color item_text #f5e0dc; /* Soft pinkish white for item text */
+@define-color item_box_selected #31748f; /* Muted teal for selected items */
+@define-color item_text_selected #f5e0dc; /* Light pink text for selected items */
+@define-color item_name_selected #f5e0dc; /* Light pink name for selected items */
+@define-color item_shortcut_color #9ccfd8; /* Light blue for shortcuts */
+@define-color item_shortcut_shadow darker(@bg_color); /* Darker shadow for shortcuts */
+@define-color item_shortcut_color_sel #f5e0dc; /* Soft pink for selected shortcuts */
+@define-color item_shortcut_shadow_sel darker(@item_box_selected); /* Darker shadow for selected shortcuts */
+
+.app {
+    background-color: @window_bg;
+    border-color: @window_border_color;
+}
+
+.input {
+    color: @input_color;
+}
+
+/**
+ * Selected text in input
+ */
+.input *:selected,
+.input *:focus,
+*:selected:focus {
+    background-color: alpha(@selected_bg_color, 0.9);
+    color: @selected_fg_color;
+}
+
+.item-text {
+    color: @item_text;
+}
+
+.item-name {
+    color: @item_name;
+}
+
+.selected.item-box {
+    background-color: @item_box_selected;
+    border-left: 1px solid @window_border_color;
+    border-right: 1px solid @window_border_color;
+}
+
+.selected.item-box .item-text {
+    color: @item_text_selected;
+}
+
+.selected.item-box .item-name {
+    color: @item_name_selected;
+}
+
+.item-shortcut {
+    color: @item_shortcut_color;
+    text-shadow: 1px 1px 1px @item_shortcut_shadow;
+}
+
+.selected.item-box .item-shortcut {
+    color: @item_shortcut_color_sel;
+    text-shadow: 1px 1px 1px @item_shortcut_shadow_sel;
+}
+
+.prefs-btn {
+    opacity: 0.8;
+}
+
+.prefs-btn * {
+    box-shadow: none;
+}
+
+.prefs-btn:hover {
+    background-color: @prefs_background;
+}
+
+.no-window-shadow {
+    margin: -20px;
+}

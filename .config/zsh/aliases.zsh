@@ -21,8 +21,6 @@ alias ran='ranger'
 alias urlview='urlscan'
 alias mdkir='mkdir'
 alias setwalcol='set_wallpaper_and_colorscheme'
-alias python="python3"
-alias pip="pip3"
 
 alias doc='docker-compose'
 alias docup='docker-compose up'

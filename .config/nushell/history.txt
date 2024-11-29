@@ -1,0 +1,237 @@
+ls
+fastfetch 
+sudo pacman -S eza
+eza
+clear
+ls
+/bin/ls
+/bin/ls -c
+/bin/ls
+lsd
+fastfetch 
+rm ly-session.log
+clear
+$env
+ls | sort-by modified
+cat cor
+cat core
+rm core
+ls
+cat yay
+cat vpn/
+cat todo_artists
+clear
+ls | grep 'todo'
+ls
+ls | head
+ls | first 
+ls
+ls | first  3
+ls | first 5
+ls | where name like 'books'
+ls | where name like 'Books'
+sudo chsh -u neon -s /bin/nu
+sudo chsh neon -s /bin/nu
+ls
+lsd
+clear
+ls
+neofetch
+ls
+cat --help
+paru oh-my-posh
+oh-my-posh get shell
+$nu.env-path
+nvim .config/nushell/env.nu
+$nu.config-path
+nvim .config/nushell/config.nu
+neofetch
+ls
+clear
+mkdir .config/nushell/themes
+mkdir .config/nushell/prompts
+cd .config/nushell/prompts/
+nvim huvix.omp.json
+cd
+nvim .config/nushell/config.nu
+nvim .config/nushell/env.nu
+neofetch
+fastfetch 
+nvim .config/nushell/prompts/material.omp.json
+nvim .config/nushell/env.nu
+ls
+clear
+fastfetch 
+ls
+fastfetch 
+nvim .config/nushell/prompts/pure.omp.json
+nvim .config/nushell/env.nu
+exit
+ls
+cd workspace/Draiv_back/
+fastfetch 
+nvim .config/nushell/prompts/pure.omp.json
+cd
+nvim .config/nushell/prompts/pure.omp.json
+ls
+cd workspace/Draiv_back/
+ls
+nvim .config/nushell/prompts/pure.omp.json
+ls
+neofetch
+nvim .config/nushell/prompts/pure.omp.json
+ls
+lsd
+zsh
+clear
+paru carapace
+sudo pacman -S mpd
+vi
+vim
+nvim .config/autostart/mpd.desktop
+/usr/bin/mpd
+htop
+clear
+ls
+mpd
+ps
+ps | where name like '%mpd%'
+ps -aux
+ps aux
+ps --long 
+ps
+lsof
+sudo lsof
+netstat
+ss
+ss -tulwn
+sudo mpd
+paru ncmpcpp
+ncmpcpp 
+yay platttenalbum
+paru plattenalbum
+mkdir -p .config/mpd
+mkdir .config/mpd
+nvim .config/mpd/mpd.conf
+mpd
+man mpd
+ls
+clear
+ls Music/
+clear
+nvim .config/mpd/mpd.conf
+mpd .config/mpd/mpd.conf
+mpd --no-daemon --stdout --verbose
+ss -putan | grep 6600
+ss -putan
+ss -putan | grep 6600
+killall mpd
+sudo killall mpd
+ss -putan | grep 6600
+mpd --no-daemon --stdout --verbose
+ss -putan | grep 6600
+clear
+paru mpd
+paru mpd-openrc
+killall mpde
+killall mpd
+mpd --no-daemon --stdout --verbose
+killl
+killall mpd
+mpd .config/mpd/mpd.conf
+vim .config/mpd/mpd.conf
+nvim .config/mpd/mpd.conf
+mpd .config/mpd/mpd.conf
+nvim .config/mpd/mpd.conf
+mpd .config/mpd/mpd.conf
+killall mpd
+mpd .config/mpd/mpd.conf
+ss -putan | grep 6600
+sudo pacman -S sonata
+paru -S sonata
+bash <(curl -sL https://mierak.github.io/rmpc/run-rmpc)
+zsh
+rmpc config > ~/.config/rmpc/config.ron
+ls
+nvim .config/rmpc/config.ron
+sudo pacman -S foot
+nvim .config/foot/foot.ini
+neofetch
+paru openntpd
+sudo rc-update add openntpd
+sudo rc-update 
+sudo rc-update add ntpd
+ls /etc/localtime
+/bin/ls /etc/localtime
+/bin/ls -l /etc/localtime
+ntpd 
+sudo ntpd 
+man ntpd
+man adjtime
+ntpdate
+hwclock --systohc
+sudo hwclock --systohc
+ls
+ls .local/share/applications/
+cp .local/share/applications/Alacritty.desktop .local/share/applications/WezTerm.desktop
+wezterm
+nvim .local/share/applications/WezTerm.desktop
+ls
+ls /usr/share/applications
+ls /usr/share/applications | where name like '%term%'
+ls /usr/share/applications | where name like '%wez%'
+ls /opt/
+sudo pacman -R vala-panel
+ls
+ls .local/share/applications/
+ls /usr/local/share/applications
+ls /usr/local/share
+paru wezterm
+find / -name '*.desktop'
+find / --name '*.desktop'
+find / -name '*.desktop'
+find
+man find
+find / '*.desktop' 
+locate
+zsh
+nvim /usr/share/applications/org.wezfurlong.wezterm.desktop
+sudo nvim /usr/share/applications/org.wezfurlong.wezterm.desktop
+nvim .local/share/applications/WezTerm.desktop
+man wezterm
+mkdir .config/wezterm
+nvim .config/wezterm/wezterm.lua
+fc-list
+nvim .config/wezterm/wezterm.lua
+wezterm 
+nvim .config/wezterm/wezterm.lua
+rmpc
+carapace
+nvim .config/nushell/env.nu
+nvim .config/nushell/config.nu
+exit
+clear
+rmpc --address 
+! mkdir
+grep
+python --version
+mpd --version
+paru kubectl
+python -v
+python -V 
+clear
+ls
+clear
+is
+clear
+zsh
+nvim .config/nushell/config.nu
+nvim .config/nushell/env.nu 
+ls
+which kill
+ls
+clear
+sudo chsh neon -s /bin/zsh
+exit
+zsh
+exit

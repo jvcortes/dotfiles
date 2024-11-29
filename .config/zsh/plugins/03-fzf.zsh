@@ -43,3 +43,5 @@ _fzf_comprun() {
 
 source $HOME/.config/fzf/fzf-git.sh
 source $HOME/.config/fzf/file-interactive-search.zsh
+
+bindkey -r '^K'

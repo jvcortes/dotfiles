@@ -1,6 +1,9 @@
 znap source marlonrichert/zsh-autocomplete
 zstyle ':*:compinit:' arguments -D -i -u -C -w
 
+bindkey              '^I'         menu-complete
+bindkey "$terminfo[kcbt]" reverse-menu-complete
+
 bindkey '\t' menu-select "$terminfo[kcbt]" menu-select
 bindkey -M menuselect '\t' menu-complete "$terminfo[kcbt]" reverse-menu-complete
 

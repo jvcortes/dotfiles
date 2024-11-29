@@ -1,4 +1,8 @@
+local mason = require('mason')
+local mason_lspconfig = require('mason-lspconfig')
+local lspconfig = require('lspconfig')
 local lsp_zero = require('lsp-zero')
+
 lsp_zero.extend_lspconfig()
 
 lsp_zero.on_attach(function(client, bufnr)
@@ -36,15 +40,10 @@ lsp_zero.on_attach(function(client, bufnr)
 	end, opts)
 end)
 
-require('lspconfig').lua_ls.setup(lsp_zero.nvim_lua_ls())
-require('lspconfig').pylsp.setup{}
+mason.setup()
+mason_lspconfig.setup()
 
-require('mason').setup({})
-require('mason-lspconfig').setup({
-	handlers = {
-		lsp_zero.default_setup
-	}
-})
+lspconfig.lua_ls.setup(lsp_zero.nvim_lua_ls())
 
 local cmp = require('cmp')
 local cmp_action = lsp_zero.cmp_action()
@@ -77,4 +76,5 @@ cmp.setup({
 		return true
 	end
 })
+
 

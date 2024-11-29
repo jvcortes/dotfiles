@@ -1,0 +1,14 @@
+[general]
+
+import = [
+	'~/.config/alacritty/themes/rose-pine.toml'
+]
+
+[window]
+padding = { x = 10, y = 10 }
+dimensions = { columns = 200, lines = 35 }
+opacity = 0.9
+
+[font]
+normal = {family = 'Noto Sans Mono', style = 'regular'}
+size = 9
