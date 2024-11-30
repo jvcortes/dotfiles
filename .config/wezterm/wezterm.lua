@@ -4,11 +4,29 @@ local wezterm = require 'wezterm'
 -- This will hold the configuration.
 local config = wezterm.config_builder()
 
+
+local function getOS()
+    local osname
+	local fh, err = assert(io.popen("uname 2>/dev/null","r"))
+
+	if fh then
+		osname = fh:read()
+	end
+
+	return osname or "Windows"
+end
+
 -- This is where you actually apply your config choices
 
 -- For example, changing the color scheme:
-config.font = wezterm.font 'Noto Sans Mono'
-config.font_size = 10
+--
+if getOS() == 'Linux' then
+    config.font = wezterm.font 'FantasqueSansM Nerd Font Mono'
+elseif getOS() == 'Darwin' then
+    config.font = wezterm.font 'MesloLG Nerd Font Mono'
+end
+
+config.font_size = 11
 config.color_scheme = 'rose-pine'
 
 config.enable_tab_bar = false
