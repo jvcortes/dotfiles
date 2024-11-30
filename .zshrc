@@ -24,13 +24,9 @@ bindkey -v
 bindkey '^v' edit-command-line
 bindkey -M viins jk vi-cmd-mode
 
-source $HOME/.config/zsh/env_variables.zsh
+source $HOME/.config/zsh/env.zsh
 source $HOME/.config/zsh/keybindings.zsh
 source $HOME/.config/zsh/functions.zsh
-
-if [[ $(uname -s) -eq "Darwin" ]] then
-  source $HOME/.config/zsh/macos.zsh
-fi
 
 for file in $HOME/.config/zsh/plugins/*.(zsh|bash); do
   source "$file"

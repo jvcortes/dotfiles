@@ -15,3 +15,9 @@ export LESS_TERMCAP_so=$'\E[01;30m'
 export LESS_TERMCAP_ue=$'\E[0m'
 export LESS_TERMCAP_us=$'\E[01;36m'
 export LESS=-r
+
+if [ "$(uname -r)" = "Darwin" ]; then
+    if [ -d "$(brew --prefix)/opt/grep/libexec/gnubin" ]; then
+        PATH="$(brew --prefix)/opt/grep/libexec/gnubin:$PATH"
+    fi
+fi
