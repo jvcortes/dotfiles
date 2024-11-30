@@ -23,7 +23,7 @@ end
 if getOS() == 'Linux' then
     config.font = wezterm.font 'FantasqueSansM Nerd Font Mono'
 elseif getOS() == 'Darwin' then
-    config.font = wezterm.font 'MesloLG Nerd Font Mono'
+    config.font = wezterm.font 'MesloLGM Nerd Font Mono'
 end
 
 config.font_size = 11
