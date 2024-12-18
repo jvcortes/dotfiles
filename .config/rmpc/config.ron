@@ -14,7 +14,7 @@
     status_update_interval_ms: 1000,
     select_current_song_on_change: false,
     album_art: (
-        method: Iterm2,
+        method: Sixel,
         max_size_px: (width: 600, height: 600),
     ),
     keybinds: (

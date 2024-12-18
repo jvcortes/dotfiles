@@ -21,7 +21,7 @@
 ;; See 'C-h v doom-font' for documentation and more examples of what they
 ;; accept. For example:
 ;;
-(setq doom-font (font-spec :family "Noto Sans Mono" :size 13)
+(setq doom-font (font-spec :family "FantasqueSansM Nerd Font Mono" :size 13)
       doom-variable-pitch-font (font-spec :family "Noto Sans" :size 13))
 ;;
 ;; If you or Emacs can't find your font, use 'M-x describe-font' to look them
@@ -96,6 +96,7 @@
 (setq org-startup-with-inline-images t)
 (setq org-hide-drawer-startup nil)
 (setq org-cycle-hide-drawer-startup t)
+(setq org-cycle-separator-lines 2)
 (setq line-spacing 0.2)
 (setq org-id-link-to-org-use-id t)
 
@@ -128,13 +129,6 @@
   (setq org-appear-autoemphasis   t)   ;; Show bold, italics, verbatim, etc.
   (setq org-appear-autolinks      t)   ;; Show links
   (setq org-appear-autosubmarkers t)) ;; Show sub- and superscripts
-
-(use-package! org-padding
-  :commands (org-padding-mode)
-  :hook     (org-mode . org-padding-mode)
-  :config
-  (setq org-padding-heading-padding-alist
-        '((3.0 . 1.5) (2.8 . 1.2) (3.0 . 0.5) (3.0 . 0.5) (2.5 . 0.5) (2.0 . 0.5) (1.5 . 0.5) (0.5 . 0.5))))
 
 (use-package! org-tidy
   :commands (org-tidy-mode)
