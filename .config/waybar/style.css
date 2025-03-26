@@ -1,0 +1,107 @@
+@import './colorschemes/rose-pine.css';
+
+
+@define-color background shade(@base, 0.87);
+
+* {
+    font-family: "Terminus";
+    font-size: 11px;
+}
+
+
+window#waybar { 
+    background-color: @black; 
+    color: @foreground;    
+}
+
+
+.modules-left {
+	background-color: @background;
+	padding: 0px 0px 0px 0px;
+}
+
+
+.modules-right {
+	background-color: @background;
+	padding: 0px 5px 0px 0px;
+}
+
+
+#custom-scratch {
+	background-color: @background;
+	color: @foreground;
+	padding: 0px 9px 0px 9px;
+}
+
+
+#workspaces {
+}
+
+
+#workspaces button {
+	padding: 0px 11px 0px 11px; 
+ 	min-width: 1px;
+    border-radius: 0px;
+	color: @foreground;
+}
+
+#workspaces button.focused { 
+	padding: 0px 11px 0px 11px; 
+	background-color: @background;
+	color: @blue;
+}
+
+
+#mode { 
+	 background-color: @cyan;
+	 color: @black;
+     padding: 0px 5px 0px 5px;
+     border: 0;
+}
+
+
+#window {
+	 color: @foreground;
+	 background-color: @black;
+     padding: 0px 10px 0px 10px;
+}
+
+
+window#waybar.empty #window {
+	background-color: transparent;
+	color: transparent;
+}
+
+
+window#waybar.empty {
+	background-color: @background;
+}
+
+
+#temperature, #backlight, #pulseudio, #battery {
+    padding: 0px 15px 0px 15px;
+}
+    
+
+#network {
+    padding: 0px 30px 0px 15px;
+}
+
+#clock {
+	margin: 0px 15px 0px 15px;
+}
+
+
+#tray{
+   padding: 0px 8px 0px 5px;
+   margin: 0px 5px 0px 5px;
+}
+
+
+#network {
+	color: @green
+}
+
+#network.disconnected {
+    color: @dark_gray;
+}

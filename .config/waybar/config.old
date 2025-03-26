@@ -1,0 +1,80 @@
+{
+	// "layer": "top", // Waybar at top layer
+	"position": "top", // Waybar position (top|bottom|left|right)
+	"height": 33, // Waybar height (to be removed for auto height)
+	// Choose the order of the modules
+	"modules-left": ["sway/workspaces"],
+	"modules-center": [],
+	"modules-right": ["pulseaudio/slider", "network", "battery", "clock"],
+	"sway/workspaces": {
+		"disable-scroll": true,
+		"all-outputs": true,
+		"format": "{name}"
+	},
+	"idle_inhibitor": {
+		"format": "{icon}",
+		"format-icons": {
+			"activated": "",
+			"deactivated": ""
+		}
+	},
+	"tray": {
+		"spacing": 10
+	},
+	"clock": {
+		"format": "{:%a, %b %d, %H:%M}",
+		"tooltip": true,
+		"tooltip-format": "<span font='Terminus'>{calendar}</span>",
+		"calendar": {
+			"mode": "month",
+			"format": {
+				"today": "<span ><b><u>{}</u></b></span>"
+			}
+		}
+	},
+	"battery": {
+		"interval": 1,
+		"states": {
+			"full": 100,
+			"good": 95,
+			"warning": 30,
+			"critical": 15
+		},
+		"format-charging": "<span size='x-large' rise='-1000' >{icon}</span> {capacity}%",
+		"format-plugged": "<span >󱐥</span>",
+		"format-full": "<span size='x-large' rise='-1000' >󰁹</span>",
+		"format-good": "<span size='x-large' rise='-1000' >{icon}</span> {capacity}%", // An empty format will hide the module
+		"format-warning": "<span >{icon}</span> {capacity}%", // An empty format will hide the module
+		"format-critical": "<span >{icon}</span> {capacity}%", // An empty format will hide the module
+		"format-icons": {
+			"default": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
+			"charging": ["󰢟", "󰢜", "󰂆", "󰂇", "󰂈", "󰢝", "󰂉", "󰢞", "󰂊", "󰂋", "󰂅"] 
+		}
+	},
+	"network": {
+		"interface": "wlan0", // (Optional) To force the use of this interface
+		"format-wifi": "<span ></span>",
+		"format-ethernet": "<span >󰈀,/span>",
+		"format-disconnected": "<span .󰌙</span>",
+		"tooltip": true,
+		"tooltip-format": "{ipaddr}/{cidr}",
+		"tooltip-format-wifi": "{ipaddr}/{cidr} at {essid}"
+	},
+	"pulseaudio/slider": {
+		"min": 0,
+		"max": 100,
+		"orientation": "horizontal"
+	},
+	"custom/updates": {
+		"format": "{icon} {}",
+		"return-type": "json",
+		"format-icons": {
+			"has-updates": "<span size='x-large' rise='-1000' >󰏖</span>",
+			"updated": "<span ></span>"
+		},
+		"exec-if": "which waybar-module-pacman-updates",
+		"exec": "waybar-module-pacman-updates --interval-seconds 5 --network-interval-seconds 300"
+
+	}
+}
+

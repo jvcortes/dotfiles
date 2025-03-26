@@ -1,0 +1,247 @@
+@import './colorschemes/rose-pine.css';
+
+
+@define-color background shade(@base, 0.87);
+
+* {
+    border: none;
+    border-radius: 0;
+    /* `ttf-font-awesome` is required to be installed for icons */
+    font-family: "Terminus", Helvetica, Arial, sans-serif;
+
+    /* adjust font-size value to your liking: */
+    font-size: 13px;
+
+    min-height: 0;
+}
+
+window#waybar {
+    background-color: @background;
+}
+
+#tags button {
+     padding: 0 0.8em;
+    /* background-color: transparent; */
+    color: @dark_gray;
+}
+
+#tags button.occupied {
+    color: @foreground;
+}
+
+/* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
+#tags button:hover {
+    box-shadow: inherit;
+    text-shadow: inherit;
+    background: @background;
+    border: none;
+    padding: 0 0.8em;
+}
+
+#tags button.focused {
+    color: @blue;
+}
+
+#tags button.urgent {
+    background-color: @red;
+}
+
+
+#workspaces button {
+     padding: 0 0.8em;
+    /* background-color: transparent; */
+    color: @dark_gray;
+}
+
+#workspaces button.occupied {
+    color: @foreground;
+}
+
+/* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
+#workspaces button:hover {
+    box-shadow: inherit;
+    text-shadow: inherit;
+    background: @background;
+    border: none;
+    padding: 0 0.8em;
+    transition: none;
+}
+
+#workspaces button.focused {
+    color: @blue;
+    background: @background;
+    transition: none;
+}
+
+#workspaces button.urgent {
+    background-color: @red;
+}
+
+#mode {
+    background-color: @magenta;
+}
+
+#clock,
+#battery,
+#cpu,
+#memory,
+#temperature,
+#backlight,
+#network,
+#pulseaudio,
+#custom-media,
+#tray,
+#mode,
+#idle_inhibitor,
+#custom-updates,
+#mpd {
+    padding: 0 10px;
+    margin: 6px 3px; 
+    color: @background;
+}
+
+
+#window,
+#workspaces {
+    margin: 0 4px;
+}
+
+/* If workspaces is the leftmost module, omit left margin */
+.modules-left > widget:first-child > #workspaces {
+    margin-left: 0;
+}
+
+/* If workspaces is the rightmost module, omit right margin */
+.modules-right > widget:last-child > #workspaces {
+    margin-right: 0;
+}
+
+#custom-updates {
+    background-color: @background;
+    color: @foreground;
+}
+
+#clock {
+    background-color: @background;
+    color: @foreground;
+}
+
+#battery {
+    background-color: @background;
+    color: @green;
+}
+
+#battery.plugged {
+     font-size: 18px;
+}
+
+#battery.charging {
+    color: @blue;
+    background-color: @background;
+}
+
+@keyframes blink {
+    to {
+        background-color: @foreground;
+        color: @background;
+    }
+}
+
+#battery.critical:not(.charging) {
+    background-color: @background;
+    color: @red;
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+label:focus {
+    background-color: @background;
+}
+
+#network {
+    background-color: @background;
+    color: @yellow;
+}
+
+#network.disconnected {
+    background-color: @background;
+    color: @dark_gray;
+}
+
+#pulseaudio {
+    background-color: @background;
+    color: @magenta;
+}
+
+#pulseaudio.muted {
+    background-color: @background;
+    color: @foreground;
+}
+
+#pulseaudio-slider slider {
+    min-height: 1px;
+    min-width: 1px;
+    background-color: @foreground;
+    opacity: 0;
+    background-image: none;
+    border: 1px;
+    box-shadow: none;
+}
+
+#pulseaudio-slider trough {
+    min-height: 3px;
+    min-width: 90px;
+    border-radius: 1px;
+    background-color: @dark_gray;
+}
+
+#pulseaudio-slider highlight {
+    min-width: 0px;
+    border-radius: 0;
+    background-color: @green;
+}
+
+#tray {
+    background-color: @blue;
+}
+
+#idle_inhibitor {
+    background-color: @background;
+}
+
+#idle_inhibitor.activated {
+    background-color: @background;
+    color: @dark_gray;
+}
+
+#mpd {
+    background-color: @background;
+    color: @green;
+}
+
+#mpd.disconnected {
+    background-color: @background;
+}
+
+#mpd.stopped {
+    background-color: @background;
+}
+
+#mpd.paused {
+    background-color: @background;
+}
+
+#language {
+    background: @background;
+    color: @dark_gray;
+    padding: 0 5px;
+    margin: 6px 3px;
+    min-width: 16px;
+}
+
+#clock.tooltip {
+    background: @background;
+}

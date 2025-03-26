@@ -1,0 +1,104 @@
+{
+	"layer": "top",	
+		"position": "top",
+		"height": 27,
+
+
+		"modules-left": ["sway/workspaces", "sway/mode", "sway/window"],
+		"modules-center": [],
+		"modules-right": ["network", "pulseaudio", "battery", "clock", "tray"],
+
+
+		"sway/workspaces": {
+			"disable-scroll": true,
+			"disable-markup": true,
+			"format": "{index}" 
+		},
+
+
+		"sway/window": {
+			"format": "{}",
+			"max-length": 150,
+				"rewrite": {
+					"(.*)(Mozilla Firefox)$": "Firefox",
+					"(.*) - (Chromium)$": "Chromium",
+					"(.*)(.*Emacs)$": "Emacs",
+					"(.*): nvim(.*)$": "Neovim",
+					"nvim": "Neovim",
+					"(.*): rmpc$": "RMPC",
+					"^Yazi: (.*)$": "Yazi"
+				},
+		},
+
+
+		"custom/scratch": {
+			"interval": 3,
+			"exec": "swaymsg -t get_tree | jq 'recurse(.nodes[]) | first(select(.name==\"__i3_scratch\")) | .floating_nodes | length | select(. >= 0)'",
+			"format": "^{}", 
+			"on-click": "swaymsg 'scratchpad show'",
+			"on-click-right": "swaymsg 'move scratchpad'"
+		},
+
+
+		"tray": {
+			"icon-size": 18,
+			"spacing": 15
+		},
+
+
+		"clock": {
+			"format": "{:%a, %b %d %R}",
+			"interval": 30,
+			"tooltip": false
+		},
+
+
+		"battery": {
+			"bat": "BAT0",
+			"states": {
+				"full": 99,
+				"good": 98,
+				"normal": 98,
+				"warning": 20,
+				"critical": 20
+			},
+
+			"format": "{icon}   {capacity}%",
+			"format-good": "{icon}   {capacity}%", 
+			"format-full": "   {capacity}%",
+			"format-icons": ["", "", "", "", ""],
+			"interval": 30
+		},
+
+
+		"network": {
+			"interface": "wlan0", 
+			"format-wifi": "",
+			"format-disconnected": "睊 Disconnected",
+			"interval": 60
+		},
+
+
+
+		"backlight": {
+			"device": "intel_backlight",
+			"format": "{icon} {percent}%  ",
+			"format-icons": ["","","",""],
+			"interval": 60
+		},
+
+
+		"pulseaudio": {
+			"format": "{icon:2} {volume:2}%  ",
+			"format-bluetooth": "  {volume:2}%  ",
+			"format-muted":"婢 Mute",
+			"interval": 60,
+
+			"format-icons": {
+				"default": [""]
+			},
+
+			"on-click": "pavucontrol"    
+		}
+
+}
