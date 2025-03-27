@@ -1,0 +1,13 @@
+@theme "/usr/share/rofi/themes/rose-pine.rasi"
+
+configuration {
+	show-icons: true;
+}
+
+* {
+	font: "Terminus 12";
+}
+
+listview {
+	spacing:	8px;
+}

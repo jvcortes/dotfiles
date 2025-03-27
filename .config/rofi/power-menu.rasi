@@ -1,0 +1,27 @@
+@import "./config.rasi"
+
+window {
+  width: 10%;
+  length: 5%;
+  x-offset:                       0px;
+  y-offset:                       125px;
+}
+
+inputbar {
+  enabled: false;
+}
+
+listview {
+    columns:                        1;
+    lines:			                    6;
+    spacing:                        13px;
+    cycle:                          false;
+    dynamic:                        true;
+    border:                         0;
+    layout:                         vertical;
+    scrollbar:                      false;
+}
+
+entry {
+    length: 13px;
+}
