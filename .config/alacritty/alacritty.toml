@@ -1,8 +1,7 @@
-[general]
-
 import = [
 	'~/.config/alacritty/themes/rose-pine.toml'
 ]
+shell = "/bin/zsh"
 
 [window]
 padding = { x = 10, y = 10 }

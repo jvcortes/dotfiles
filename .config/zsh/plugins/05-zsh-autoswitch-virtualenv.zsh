@@ -1,3 +1,3 @@
-znap source MichaelAquilina/zsh-autoswitch-virtualenv
+zcomet load MichaelAquilina/zsh-autoswitch-virtualenv
 
 export WORKON_HOME=$HOME/.virtualenvs

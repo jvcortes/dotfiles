@@ -1,1 +1,1 @@
-znap source zsh-users/zsh-completions
+zcomet load zsh-users/zsh-completions
