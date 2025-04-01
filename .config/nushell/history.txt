@@ -235,3 +235,32 @@ sudo chsh neon -s /bin/zsh
 exit
 zsh
 exit
+open `Custom StaffskyStustudentData.txt` | from tsv | first 10
+open `Custom StaffskyStustudentData.txt` | from tsv | where teacherid == 145796
+open `Parent CustomskyStustudentData.txt` | from tsv | where parentid == 145796
+open `Custom StaffskyStustudentData.txt` | from tsv | where teacherid == 145796
+exit
+open staffHRBasedskyFinhrStaff.txt | from tsv | first 10
+open staffskyStustudentData.txt | from tsv | first 10
+open staffskyStustudentData.txt | from tsv | where lastName == 'Falcon'
+exit
+open results.txt
+open results.txt | from tsv
+open results.txt | from tsv | where lastName == 'Falcon'
+open results.txt | from tsv | where lastName == 'FALCON'
+open results.txt | from tsv | where teacherid == 29816
+open results.txt | from tsv | where teacherid == '29816'
+nvim results.txt
+open results.txt | from tsv | where teacherid == 29816
+open results.txt | from tsv | where lastName == 'FALCON'
+open results.txt | from tsv | where teacherid == 29816
+open results.txt | from tsv | where teacherid == ' 29816'
+open results.txt | from tsv | where teacherid =~ 29816
+open results.txt | from tsv | where teacherid =~ '29816'
+open results.txt | from tsv | where organizationid == '610'
+open results.txt | from tsv | where organizationid == 610
+cd ..
+cd files/
+open staffHRBasedskyFinhrStaff.txt | from tsv | where teacherid == 23044
+open staffHRBasedskyFinhrStaff.txt | from tsv | where teacherid == 29852
+open staffHRBasedskyFinhrStaff.txt | from tsv | where teacherid == 29816
