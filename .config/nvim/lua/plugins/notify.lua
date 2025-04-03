@@ -1,13 +1,14 @@
 return {
-	'rcarriga/nvim-notify',
-	event = 'VimEnter',
+	"rcarriga/nvim-notify",
+	event = "VeryLazy",
+	opts = {
+	},
 	config = function ()
-		require('notify').setup(
-			{
-				stages = 'fade',
-				timeout = 6000
-			}
-		)
-		vim.notify = require('notify')
+		require('notify').setup({
+			background_colour = '#000000',
+			render = 'simple',
+			level = 2,
+			stages = 'fade'
+		})
 	end
 }

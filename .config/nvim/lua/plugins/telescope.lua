@@ -2,7 +2,11 @@ return {
 	{
 		'nvim-telescope/telescope.nvim',
 		event = 'BufReadPre',
-		dependencies = { 'nvim-lua/plenary.nvim' },
+		dependencies = {
+			'nvim-lua/plenary.nvim',
+			{ 'nvim-telescope/telescope-fzf-native.nvim', build = 'make'},
+			'nvim-tree/nvim-web-devicons'
+		},
 		config = function()
 			local builtin = require('telescope.builtin')
 

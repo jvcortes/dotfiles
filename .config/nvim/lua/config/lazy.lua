@@ -12,12 +12,15 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
-require('lazy').setup('plugins', {
-	install = { colorscheme = { 'rose-pine' } },
-	defaults = { lazy = true },
-	ui = {
-		border = 'rounded',
-	},
-	checker = { enabled = true },
-	debug = false,
-})
+require('lazy').setup({
+  {import = 'plugins'},
+  {import = 'plugins.lsp'}},
+  {
+    install = { colorscheme = { 'tokyonight-night' } },
+    -- defaults = { lazy = true },
+    ui = {
+      border = 'rounded',
+    },
+    checker = { enabled = true },
+    debug = false,
+  })
