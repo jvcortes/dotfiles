@@ -1,25 +1,36 @@
 return {
   "yetone/avante.nvim",
+  tag = "v0.0.23",
   event = "VeryLazy",
   version = false, -- Never set this value to "*"! Never!
   opts = {
     -- add any opts here
     -- for example
-  provider = "fireworks_deepseek_r1_basic",
-  vendors = {
-    fireworks_deepseek_r1_basic = {
-      __inherited_from = "openai",
-      api_key_name = "FIREWORKS_API_KEY",
-      endpoint = "https://api.fireworks.ai/inference/v1/",
-      model = "accounts/fireworks/models/deepseek-r1-basic",
+    provider = "claude",
+    claude = {
+      endpoint = "https://api.anthropic.com",
+      model = "claude-3-7-sonnet-20250219",
+      temperature = 0,
+      max_tokens = 4096,
     },
-    fireworks_deepseek_r1_fast = {
-      __inherited_from = "openai",
-      api_key_name = "FIREWORKS_API_KEY",
-      endpoint = "https://api.fireworks.ai/inference/v1/",
-      model = "accounts/fireworks/models/deepseek-r1",
+    gemini = {
+      model = "gemini-2.5-pro-preview-05-06",
     },
-  },
+    vendors = {
+      fireworks_deepseek_r1_basic = {
+        __inherited_from = "openai",
+        api_key_name = "FIREWORKS_API_KEY",
+        endpoint = "https://api.fireworks.ai/inference/v1/",
+        model = "accounts/fireworks/models/deepseek-r1-basic",
+        tool_choice = 'auto'
+      },
+      fireworks_deepseek_r1_fast = {
+        __inherited_from = "openai",
+        api_key_name = "FIREWORKS_API_KEY",
+        endpoint = "https://api.fireworks.ai/inference/v1/",
+        model = "accounts/fireworks/models/deepseek-r1",
+      },
+    },
   },
   -- if you want to build from source then do `make BUILD_FROM_SOURCE=true`
   build = "make",
@@ -30,12 +41,12 @@ return {
     "nvim-lua/plenary.nvim",
     "MunifTanjim/nui.nvim",
     --- The below dependencies are optional,
-    "echasnovski/mini.pick", -- for file_selector provider mini.pick
+    "echasnovski/mini.pick",         -- for file_selector provider mini.pick
     "nvim-telescope/telescope.nvim", -- for file_selector provider telescope
-    "hrsh7th/nvim-cmp", -- autocompletion for avante commands and mentions
-    "ibhagwan/fzf-lua", -- for file_selector provider fzf
-    "nvim-tree/nvim-web-devicons", -- or echasnovski/mini.icons
-    "zbirenbaum/copilot.lua", -- for providers='copilot'
+    "hrsh7th/nvim-cmp",              -- autocompletion for avante commands and mentions
+    "ibhagwan/fzf-lua",              -- for file_selector provider fzf
+    "nvim-tree/nvim-web-devicons",   -- or echasnovski/mini.icons
+    "zbirenbaum/copilot.lua",        -- for providers='copilot'
     {
       -- support for image pasting
       "HakonHarnes/img-clip.nvim",
@@ -62,4 +73,8 @@ return {
       ft = { "markdown", "Avante" },
     },
   },
+  behaviour = {
+    use_absolute_path = true,
+    use_cwd_as_project_root = true
+  }
 }

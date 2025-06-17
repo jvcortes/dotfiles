@@ -1,6 +1,5 @@
 include $HOME/.config/sway/user/colors
 
-
 set $mod Mod4
 
 # Home row direction keys, like vim
@@ -17,32 +16,29 @@ set $dropdown footclient -a dropdown
 set $dropdown_id dropdown
 set $dropdown_dimensions move position center, resize set width 60 ppt height 50 ppt
 
-set $menu rofi -show drun
+set $menu ~/.config/sway/scripts/rofi.sh
 set $powermenu rofi -show power-menu -modi power-menu:~/.local/bin/rofi-power-menu -config ~/.config/rofi/power-menu.rasi
-set $idle hypridle
-set $lock hyprlock
+set $idle ~/.config/sway/scripts/idle.sh
+set $idle_inhibitor sway-audio-idle-inhibit
+set $lock ~/.config/sway/scripts/lock.sh
 set $wallpaper hyprpaper
 set $bar waybar
 set $notifications mako
 set $swayr exec env RUST_BACKTRACE=1 RUST_LOG=swayr=debug swayrd > /tmp/swayrd.log 2>&1
-set $udiskie udiskie --smart-tray
-
-set $music footclient -a music rmpc
-set $music_id music
-set $music_server mpd
-set $music_dimensions move position center, resize set width 40 ppt height 30 ppt
+# set $udiskie udiskie --smart-tray
 
 set $keepassxc_id org.keepassxc.KeePassXC
 set $keepassxc_dimensions move position center, resize set width 60 ppt height 50 ppt
 
-set $display_config way-displays > /tmp/way-displays.${XDG_VTNR}.${USER}.log 2>&1
+set $display_config way-displays
 
 set $brscan-skey /opt/brother/scanner/brscan-skey/brscan-skey
-
 
 input type:keyboard {
 	xkb_layout us(altgr-intl)
 }
+
+exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
 
 # Window borders
 default_border pixel 2
@@ -55,11 +51,6 @@ for_window {
 			[app_id=$dropdown_id] scratchpad show
 			$dropdown_dimensions
 	}
-	[app_id=$music_id] {
-		move to scratchpad
-			[app_id=$music_id] scratchpad show
-			$music_dimensions
-    }
 	[app_id=$keepassxc_id] {
 		move to scratchpad
 			[app_id=$keepassxc_id] scratchpad show
@@ -71,8 +62,6 @@ bindsym --to-code {
 # Scratchpad bindsym
 ## Main terminal
 	$mod+Shift+o  exec swaymsg [app_id=$dropdown_id]	scratchpad show || exec $dropdown
-## music
-	$mod+Shift+m  exec swaymsg [app_id=$music_id]     scratchpad show || exec $music
 ## vault
 	$mod+Shift+n  exec swaymsg [app_id=$keepassxc_id]     scratchpad show || exec keepassxc
 }
@@ -92,6 +81,7 @@ set $ws8   8:8
 set $ws9   9:9
 
 bindsym $mod+Return exec $term
+bindsym $mod+Shift+Return exec kitty --single-instance
 bindsym $mod+d exec $menu
 bindsym $mod+Shift+q kill
 bindsym $mod+Shift+c reload
@@ -175,19 +165,17 @@ bindsym --locked XF86MonBrightnessUp exec brightnessctl set 1%+
 # Special key to take a screenshot with grim
 bindsym Print exec grim
 
-
 # autostart
-exec $music_server
 exec $idle
 exec $term_server
 exec $bar
-exec $display_config
-exec $notifications
+# exec $notifications
 exec $wallpaper
 exec $dropdown
-exec $music
 exec $swayr
 exec $brscan-skey
 exec $filecloud
 exec $emacs
-exec $udiskie
+# exec $udiskie
+exec $display_config
+exec $idle_inhibitor

@@ -264,3 +264,297 @@ cd files/
 open staffHRBasedskyFinhrStaff.txt | from tsv | where teacherid == 23044
 open staffHRBasedskyFinhrStaff.txt | from tsv | where teacherid == 29852
 open staffHRBasedskyFinhrStaff.txt | from tsv | where teacherid == 29816
+open contact.txt
+open contact.txt | from tsv
+open contact.txt | from tsv | columns
+open contact.txt | from tsv | select preferredLanguage1ID
+open contact.txt | from tsv | select preferredLanguage1ID | uniq
+exit
+open StaffInfiniteCampusTest.txt | from tsv | first 10
+exit
+ls
+open contact.txt | from tsv | select preferredLanguage1ID | uniq
+open contact.txt | from tsv | select preferredLanguage1ID
+open contact.txt | from tsv | select preferredLanguage1ID | uniq
+open contact.txt | from tsv | columns
+open contact.txt | from tsv | select organizationid studentid parentid firstName lastName preferredLanguage1ID
+open contact.txt | from tsv | select organizationid studentid parentid firstName lastName preferredLanguage1ID | first 10
+open contact.txt | from tsv | select preferredLanguage1ID | uniq
+open contact.txt | from tsv | select organizationid studentid parentid firstName lastName preferredLanguage1ID | where preferredLanguage1ID != ''
+open contact.txt | from tsv | select organizationid studentid parentid firstName lastName preferredLanguage1ID
+open contact.txt | from tsv | select organizationid studentid parentid firstName lastName preferredLanguage1ID | where preferredLanguage1ID != '' | first 10
+open contact.txt | from tsv | select preferredLanguage1ID | uniq
+exit
+open StaffInfiniteCampusDemographics.txt | from tsv | first 1
+open StaffInfiniteCampusDemographics.txt | from tsv | first 10
+exit
+open Parents_FOCUS.txt | from tsv
+open Parents_FOCUS.txt | from tsv | first 10
+open Parents_FOCUS.txt | from tsv | columns
+open staff.txt | from tsv | first 10
+open staff.txt | from csv -s '|'
+open staff.txt | from csv -s '|' | first 10
+open staff.txt | from csv -s '|' | columns
+open staff.txt | from csv -s '|' | select Position | uniq
+exit
+open attendanceHistoryskyStustudentData.txt | from tsv | first 10
+open attendanceHistoryskyStustudentData.txt | from tsv | select catAndPeriod
+open attendanceHistoryskyStustudentData.txt | from tsv | select catAndPeriod | where catAndPeriod =~ '*5T*'
+open attendanceHistoryskyStustudentData.txt | from tsv | select catAndPeriod | where catAndPeriod =~ '5T*'
+open attendanceHistoryskyStustudentData.txt | from tsv | select catAndPeriod | where catAndPeriod =~ '*5T*'
+open attendanceHistoryskyStustudentData.txt | from tsv | select catAndPeriod | where catAndPeriod contains '5T'
+open attendanceHistoryskyStustudentData.txt | from tsv | select catAndPeriod | where str contains '5T' catAndPeriod
+open attendanceHistoryskyStustudentData.txt | from tsv | select catAndPeriod | str contains '5T' catAndPeriod
+open attendanceHistoryskyStustudentData.txt | from tsv | select catAndPeriod | str contains '5T' catAndPeriod | uniq
+open attendanceHistoryskyStustudentData.txt | from tsv | select catAndPeriod | str contains '3T' catAndPeriod | uniq
+open attendanceHistoryskyStustudentData.txt | from tsv | select catAndPeriod | str contains '10T' catAndPeriod | uniq
+exit
+open Blackboard-Parent.csv | first 10
+open Blackboard-Parent.csv | count
+open Blackboard-Parent.csv | len
+open Blackboard-Parent.csv | length
+open Blackboard-Parent.csv | select PrimPhoneNumber
+open Blackboard-Parent.csv | first 10
+open Blackboard-Parent.csv | select Address1
+open Blackboard-Parent.csv | first 15
+exit
+open results/results.txt | from csv | first 10
+exit
+open BusBoss_UploadData.txt
+open BusBoss_UploadData.txt | from tsv
+open BusBoss_UploadData.txt | from tsv | first 10
+exit
+ls
+exit
+open Sample_Export_BB.csv
+open Sample_Export_BB.csv | first 10
+f
+exit
+cd wilson
+exit
+open Sample_Export_BB.csv | first 10
+open Sample_Export_BB.csv | first 20
+open Sample_Export_BB.csv | first 30
+open Sample_Export_BB.txt
+open Sample_Export_BB.txt | from tsv | first 30
+open Sample_Export_BB.txt | from tsv | first 40
+open Sample_Export_BB.txt | from tsv | first 50
+open Sample_Export_BB.txt | from tsv | first 60
+open BusBoss_UploadData.txt | from tsv | first 10
+open attendanceSkywardSRElementaryAttendance.txt | from tsv | first 10
+open attendanceSkywardSRElementaryAttendance.txt | from tsv | where studentid = 'PETERLIL001'
+open attendanceSkywardSRElementaryAttendance.txt | from tsv | where studentid == 'PETERLIL001'
+open attendanceSkywardSRPoDSAttendance.txt | from tsv | where studentid == 'PETERLIL001'
+open attendanceSkywardSRElementaryAttendance.txt | from tsv | first 10
+open attendanceSkywardSRPoDSAttendance.txt | from tsv | where studentid == 'OLSONLUC001'
+open attendanceSkywardSRElementaryAttendance.txt | from tsv | where studentid == 'OLSONLUC001'
+ls
+open Sample_Export_BB.csv | first 30
+open Sample_Export_BB.csv | first 50
+ls -l
+open Sample_Export_BB.csv | first 60
+open Sample_Export_BB.csv | select RouteType | uniq
+open Sample_Export_BB.csv | where RouteType =~ 'Split*'
+exit
+open Sample_Export_BB.csv | select OrganizationID | uniq
+cd ..
+..
+ls
+exit
+ls
+open Sample_Export_BB.csv | select OrganizationID | uniq
+open Sample_Export_BB.csv | select OrganizationId | uniq
+open Sample_Export_BB.csv | where OrganizationId in [210, 990, 220, 220, 250, 240, 245, 230]
+open Sample_Export_BB.csv | where OrganizationId in [210, 990, 220, 220, 250, 240, 245, 230] | first 50
+nvim Sample_Export_BB.csv
+exit
+open `attendanceSkywardSRPoDSAttendance(2025-05-23 15:30:31).txt` | from tsv | first 10
+open `attendanceSkywardSRPoDSAttendance(2025-05-23 15:30:31).txt` | from tsv | where organizationid == 90
+open `attendanceSkywardSRPoDSAttendance(2025-05-23 15:30:31).txt` | from tsv | where organizationid == 900
+open attendanceSkywardSRElementaryAttendance.txt | from tsv | where organizationid == 900
+exit
+open `attendanceSkywardSRSPASHAttendance(2025-05-22 14:20:31).txt` | from tsv | select organizationid | uniq
+open `attendanceSkywardSRSPASHAttendance(*).txt` | from tsv | select organizationid | uniq
+ls
+open attendanceSkywardSRElementaryAttendance.txt | from tsv | first 10
+open attendanceSkywardSRElementaryAttendance.txt | from tsv | where studentid == 'PETERLIL001'
+open attendanceSkywardSRPoDSAttendance.txt | from tsv | first 10
+exit
+open CustomStudentsSkywardSRCustom.txt | from tsv | first 10
+open CustomStudentsSkywardSRCustom.txt | from tsv | where studentid == 'PETERLIL001'
+open today.txt | from tsv | first 15
+exit
+open `Today's AttendancePowerSchoolAttendance.txt` | from tsv | first 10
+exit
+open today.txt | from tsv | first 15
+open today.txt | from tsv
+open today.txt | from tsv | first 15
+exit
+open today.txt | from tsv | first 15
+open today.txt | from tsv | where category == 'A'
+open today.txt | from tsv | where category == 'A' and organizationid == 4
+open today.txt | from tsv | select category, description | uniq
+open today.txt | from tsv | select category  description | uniq
+open today.txt | from tsv | where studentid == '13275'
+open today.txt | from tsv | first 15
+open today.txt | from tsv | where studentid == 13275
+open today.txt | from tsv | where studentid == 14470
+open today.txt | from tsv | where studentid == 19632
+open today.txt | from tsv | where studentid == 18285
+open today.txt | from tsv | where studentid == 13820
+exit
+open `Attendance HistoryPowerSchoolAttendance History.txt` | from tsv | first 10
+exit
+open history.txt | from tsv | first 10
+nvim history.txt
+exit
+open history.txt | from tsv | first 10
+open history.txt | from tsv | select attmodecode
+open history.txt | from tsv | first 10
+exit
+open CustomStudentsSkywardSRCustom.txt | from tsv | where studentid == 'PETERLIL001'
+open CustomStudentsSkywardSRCustom.txt | from tsv | where studentid == 'ACHTEANA000'
+open CustomStudentsSkywardSRCustom.txt | from tsv | where studentid == 'ABLESYAR000'
+exit
+open Sample_Export_BB.txt | from tsv | first 60
+open Sample_Export_BB.txt | from tsv | select '012 AM' | uniq
+open Sample_Export_BB.txt | from tsv | select 'EAA' | uniq
+open Sample_Export_BB.txt | from tsv | first 70
+open today.txt | from tsv | select category  description
+polars
+polars open
+help polars
+plugin add nu_plugin_polars
+plugin
+plugin list
+plugin add nu_plugin_polars
+exit
+open output_districts.csv | where district_name == 'WILSON AREA ISD'
+open output_districts.csv | columns
+open output_districts.csv 
+exit
+open BusBoss_UploadData.txt | from tsv | first 10
+open BusBoss_UploadData.txt | from tsv | select EAA | uniq
+open BusBoss_UploadData.txt | from tsv | where EAA in [210, 990, 220, 250, 240, 245, 230] | first 10
+exit
+open BusBoss_UploadData.txt | from tsv | where EAA in [210, 990, 220, 250, 240, 245, 230] | first 15
+exit
+open BusBoss_UploadData.txt | from tsv | where EAA in [210, 990, 220, 250, 240, 245, 230] | count
+open BusBoss_UploadData.txt | from tsv | where EAA in [210, 990, 220, 250, 240, 245, 230] | len
+open BusBoss_UploadData.txt | from tsv | where EAA in [210, 990, 220, 250, 240, 245, 230] | length
+exit
+open `attendance calls (may 28th to june 4th).csv`
+exit
+open BusBoss_UploadData.txt | from tsv | where EAA in [210, 990, 220, 250, 240, 245, 230]
+open BusBoss_UploadData.txt | from tsv | where EAA in [210, 990, 220, 250, 240, 245, 230] | first 10
+open BusBoss_UploadData.txt | from tsv | where EAA in [210, 990, 220, 250, 240, 245, 230] | where '012 AM' == '012 AM'
+open BusBoss_UploadData.txt | from tsv | where EAA in [210, 990, 220, 250, 240, 245, 230]
+open BusBoss_UploadData.txt | from tsv | where EAA in [210, 990, 220, 250, 240, 245, 230] | first 10
+open BusBoss_UploadData.txt | from tsv | where EAA in [210, 990, 220, 250, 240, 245, 230] | where '012 AM' == '012 PM'
+exit
+open BusBoss_UploadData.txt | from tsv | where EAA in [210, 990, 220, 250, 240, 245, 230] | where '012 AM' == '012 PM'
+open BusBoss_UploadData.txt | from tsv | where EAA in [210, 990, 220, 250, 240, 245, 230] | where '012 AM' == '016 AM'
+open BusBoss_UploadData.txt | from tsv | where EAA in [210, 990, 220, 250, 240, 245, 230] | where '012 AM' == '022 AM'
+open BusBoss_UploadData.txt | from tsv | where EAA in [210, 990, 220, 250, 240, 245, 230] | where '012 AM' == '022 PM'
+open BusBoss_UploadData.txt | from tsv  | where '012 AM' == '022 PM'
+cd
+exit
+open BusBoss_UploadData.txt | from tsv  | where '012 AM' == '022 PM'
+open BusBoss_UploadData.txt | from tsv  | where '012 AM' == '022 AM'
+open BusBoss_UploadData.txt | from tsv  | where '012 AM' == '026t AM'
+open BusBoss_UploadData.txt | from tsv  | where '012 AM' == '026 AM'
+exit
+open BusBoss_UploadData.txt | from tsv  | where '012 AM' == '026 AM'
+exit
+open students.csv
+open open BusBoss_UploadData.txt | from tsv | where EAA in [210, 990, 220, 250, 240, 245, 230] | where '012 AM' == '016 AM'
+open BusBoss_UploadData.txt | from tsv | where EAA in [210, 990, 220, 250, 240, 245, 230] | where '012 AM' == '022 AM'
+ls
+mv ../../../datasupport-andrew/BusBoss_UploadData.txt .
+ls
+open BusBoss_UploadData.txt | from tsv | where EAA in [210, 990, 220, 250, 240, 245, 230] | where '012 AM' == '022 AM'
+open BusBoss_UploadData.txt | from tsv | where EAA in [210, 990, 220, 250, 240, 245, 230]
+open BusBoss_UploadData.txt | from tsv  | where '012 AM' == '026 AM'
+open students.csv | where studentid == 330077
+open BusBoss_UploadData.txt | from tsv  | where '012 AM' == '026 AM'
+open BusBoss_UploadData.txt | from tsv  | where '012 AM' == '022 AM'
+nvim
+nvim new
+open BusBoss_UploadData.txt | from tsv  | where '012 AM' == '022 AM'
+open BusBoss_UploadData.txt | from tsv  | where '012 AM' == '022 PM'
+open BusBoss_UploadData.txt | from tsv  | where '012 AM' == '026 AM'
+exit
+open BusBoss_UploadData.txt | from tsv  | where '012 AM' == '026 AM'
+exit
+open parents.txt
+open parents.txt | from tsv
+exit
+open parents.txt | from tsv
+open parent.txt | from tsv
+open parents.txt | from tsv
+exit
+open parents.txt | from tsv
+open parent.txt | from tsv
+exit
+open CustomStudentTemeculaAccounts.txt
+open CustomStudentTemeculaAccounts.txt | from tsv | first 10
+open CustomStudentTemeculaAccounts.txt | from tsv | where lastName == 'Lash'
+ls
+open CustomTodaysAttendanceTemeculaAttendance.txt | from tsv | first 10-
+open CustomTodaysAttendanceTemeculaAttendance.txt | from tsv | first 10
+open CustomTodaysAttendanceTemeculaAttendance.txt | from tsv
+open CustomTodaysAttendanceTemeculaAttendance.txt
+exit
+open CustomStudentTemeculaAccounts.txt | from tsv | where lastName == 'Lash'
+open CustomStudentTemeculaAccounts.txt | from tsv | where gradeLevel in ['KN', 'TK']
+open CustomStudentTemeculaAccounts.txt | from tsv | where gradeLevel in ['KN', 'TK'] | first 10
+open CustomStudentTemeculaAccounts.txt | from tsv | where lastName == 'Lash'
+exit
+open parents2contacts.csv | first 10
+exit
+open sqlite
+open db/support_toolbox.db | query db 'SHOW DATABASES;'
+open db/support_toolbox.db | query db '.tables'
+open db/support_toolbox.db | query db "SELECT * FROM dbname.sqlite_master WHERE type='table';";
+open db/support_toolbox.db | query db "SELECT * FROM sqlite_master WHERE type='table';";
+open db/support_toolbox.db | query db "SELECT * FROM users;";
+exit
+open db/support_toolbox.db | query db "SELECT * FROM users;";
+open support_toolbox.db | query db "SELECT * FROM users;";
+open db/support_toolbox.db | query db "SELECT * FROM users;";
+exit
+open db/support_toolbox.db | query db "SELECT * FROM users;";
+exit
+open support_toolbox.db | query db "SELECT * FROM users;";
+exit
+open support_toolbox.db | query db "SELECT * FROM users;";
+open db/support_toolbox.db | query db "SELECT * FROM users;";
+exit
+open db/support_toolbox.db | query db "SELECT * FROM users;";
+open support_toolbox.db | query db "SELECT * FROM users;";
+cd ..
+..
+exit
+open support_toolbox.db | query db "SELECT * FROM users;";
+open db/support_toolbox.db | query db "SELECT * FROM sqlite_master WHERE type='table';";
+exit
+open db/support_toolbox.db | query db "SELECT * FROM sqlite_master WHERE type='table';";
+exit
+open db/support_toolbox.db | query db "SELECT * FROM sqlite_master WHERE type='table';";
+open db/support_toolbox.db | query db "SELECT * FROM sqlite_master WHERE type='table';";open support_toolbox.db | query db "SELECT * FROM users;";
+exit
+open db/support_toolbox.db | query db "SELECT * FROM users;";
+open support_toolbox.db | query db "SELECT * FROM users;";
+exitr
+exit
+open BusBoss_UploadData.txt | from tsv  | where '012 AM' == '026 AM'
+exit
+open BusBoss_UploadData.txt | from tsv  | where '012 AM' == '026 AM'
+exit
+open BusBoss_UploadData.txt | from tsv  | where '012 AM' == '026 AM'
+exit
+open attendance_today.csv
+open attendance_today.csv | first 10
+exit
+open students.csv | where studentid == 340054
+exit
