@@ -1,4 +1,4 @@
-@theme "/usr/share/rofi/themes/rose-pine.rasi"
+@theme "user/colors.rasi"
 
 configuration {
 	show-icons: true;

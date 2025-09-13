@@ -1,9 +1,9 @@
 zmodload zsh/zprof
 
-source $HOME/.config/zsh/znap/znap.zsh
+source ${ZDOTDIR:-${HOME}}/.zcomet/bin/zcomet.zsh
 source $HOME/.config/zsh/aliases.zsh
 
-znap prompt sindresorhus/pure
+zcomet load sindresorhus/pure
  
 setopt correct
 setopt nocheckjobs
@@ -24,10 +24,15 @@ bindkey -v
 bindkey '^v' edit-command-line
 bindkey -M viins jk vi-cmd-mode
 
-source $HOME/.config/zsh/env.zsh
+source $HOME/.config/zsh/modules.zsh
+source $HOME/.config/zsh/secrets.zsh
 source $HOME/.config/zsh/keybindings.zsh
 source $HOME/.config/zsh/functions.zsh
 
 for file in $HOME/.config/zsh/plugins/*.(zsh|bash); do
   source "$file"
 done
+
+source $HOME/.config/zsh/env.zsh
+
+eval "$(direnv hook zsh)"
