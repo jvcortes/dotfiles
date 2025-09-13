@@ -34,6 +34,8 @@ set $display_config way-displays
 
 set $brscan-skey /opt/brother/scanner/brscan-skey/brscan-skey
 
+set $network_manager nm_applet
+
 input type:keyboard {
 	xkb_layout us(altgr-intl)
 }
@@ -179,3 +181,4 @@ exec $emacs
 # exec $udiskie
 exec $display_config
 exec $idle_inhibitor
+exec $network_manager

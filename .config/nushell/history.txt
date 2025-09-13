@@ -558,3 +558,737 @@ open attendance_today.csv | first 10
 exit
 open students.csv | where studentid == 340054
 exit
+open parent.txt l
+open parent.txt | from tsv
+cat parent.txt
+exit
+open CustomTodaysAttendanceTemeculaAttendance.txt
+ls
+exit
+open FillableForms.csv
+open FillableForms.csv | first 10
+cd
+cd cases
+ls
+exit
+open FillableForms.csv | first 10
+ls
+cd data
+open FillableForms.csv | first 10
+opencode
+exit
+open FillableForms.csv | first 10
+exit
+open Courses.csv
+cat Courses.csv
+open Courses.csv | from tsv 
+open Courses.csv | from csv 
+open Courses.csv | from tsv
+nvim Courses.csv
+cat -a Courses.csv
+exit
+open Courses.csv | from tsv
+open Courses.csv
+nvim Courses.csv
+tr '\t' ',' < input.tsv > output.csv
+exit
+open Course.csv
+nvim Course.csv
+open Courses.csv
+nvim Courses.csv
+mv Courses.csv Courses.tsv
+open Courses.tsv
+open Courses.tsv | first 10
+nvim Courses.tsv
+open Courses.tsv | first 10
+nvim Courses.tsv
+open Courses.tsv | first 10
+ls
+open Schedules.csv
+head Schedules.csv
+mv Schedules.csv Schedules.tsv
+open Schedules.tsv | first 10
+mv Sections.csv Sections.tsv
+open Sections.tsv | first 10
+open Courses.tsv
+open Courses.tsv | where Name = '9-12 Volleyball'
+open Courses.tsv | where Name == '9-12 Volleyball'
+open Courses.tsv | where Name == 'Choir'
+open Courses.tsv | where Name == 'Show Choir'
+ls
+open Courses.tsv | where Name =~ 'Volleyball'
+open Courses.tsv | where Name =~ 'volleyball'
+open Courses.tsv | where Name =~ 'Volleyball'
+open Courses.tsv | where Name =~ '9-12'
+nvim Courses.tsv
+open Sections.tsv
+open Sections.tsv | first 10
+open Sections.tsv | where courseSection.courseName =~ 'Volleyball'
+open Sections.tsv | where courseSection.courseName -~ 'Volleyball'
+open Sections.tsv | where courseSection.courseName =~ 'Volleyball'
+open Sections.tsv | first 10
+open Sections.tsv | where 'courseSection.courseName' =~ 'Volleyball'
+open Courses.tsv | where Name =~ 'Volleyball'
+open Sections.tsv | where 'roster.sectionID' == 18641
+open Courses.tsv | where Name == 'Show Choir'
+open Sections.tsv | where 'roster.sectionID' == 19311
+open Courses.tsv | where Name == 'Girls Tennis'
+open Sections.tsv | where 'roster.sectionID' == 18789
+open Courses.tsv | where Name == 'Big Creek'
+open Courses.tsv | where Name =~ 'Creek'
+open Sections.tsv | first 10
+open Sections.tsv | where 'courseSection.staffNumber' == 1019761
+open Sections.tsv | where 'courseSection.staffNumber' == 1140049
+exit
+open `customStaffInfinite CampusCustomStaff.txt`
+open `customStaffInfinite CampusCustomStaff.txt` | from tsv
+open `customStaffInfinite CampusCustomStaff.txt` | from tsv | first 1-
+open `customStaffInfinite CampusCustomStaff.txt` | from tsv | first 10
+open `customStaffInfinite CampusCustomStaff.txt` | from tsv | columns
+open `customStaffInfinite CampusCustomStaff.txt` | from tsv | where username == 'JCRANSON'
+ls
+exit
+open `CustomParentInfinite CampusCustomParent.txt` | from tsv | first 10
+open `CustomParentInfinite CampusCustomParent.txt` | from tsv | where parentid == '19374'
+open Parents.csv | first 10
+open parent.txt | from tsv
+ls
+open parent.txt 
+head parent.txt
+exirt
+exit
+open staff.txt | from tsv | first 10
+exit
+open contact.txt
+open contact.txt | from tsv | first 10
+open contact.txt | from tsv | first 15
+open contact.txt | from tsv | columns
+open contact.txt | from tsv | select organizationid studentid parentid firstname lastName
+open contact.txt | from tsv | select organizationid studentid parentid firstName lastName
+open contact.txt | from tsv | select organizationid studentid parentid firstName lastName | first 10
+open contact.txt | from tsv | columns
+open contact.txt | from tsv | select organizationid studentid parentid firstName lastName | order by studentid
+open contact.txt | from tsv | select organizationid studentid parentid firstName lastName | sort
+open contact.txt | from tsv | select organizationid studentid parentid firstName lastName | sort-by studentid
+open contact.txt | from tsv | select organizationid studentid parentid firstName lastName | sort-by studentid | first 20
+exit
+open student.txt | from tsv | first 10
+open student.txt | from tsv | where lastName == 'Burnett'
+open contact.txt | from tsv | select organizationid studentid parentid firstName lastName | where studentid == 32767
+open contact.txt | from tsv | select organizationid studentid parentid firstName lastName | where studentid == 125
+open contact.txt | from tsv | select organizationid studentid parentid firstName lastName | where studentid == 135
+open contact.txt | from tsv | select organizationid studentid parentid firstName lastName | where lastName == 'Burnett'
+exit
+open student.txt | from tsv | where lastName == 'Bagwell'
+open contact.txt | from tsv | select organizationid studentid parentid firstName lastName | where studentid == 32794
+open contact.txt | from tsv | select organizationid studentid parentid firstName lastName | where lastName == 'Pierce'
+open student.txt | from tsv | where lastName == 'Pierce'
+open contact.txt | from tsv | select organizationid studentid parentid firstName lastName | where studentid == 32188
+open contact.txt | from tsv | select organizationid studentid parentid firstName lastName | len
+open contact.txt | from tsv | select organizationid studentid parentid firstName lastName | length
+ls
+exit
+exirt
+exit
+open contact.txt | from tsv | select organizationid studentid parentid firstName lastName | length
+open contact.txt | from tsv | select organizationid studentid parentid firstName lastName | first 10
+open contact.txt | from tsv | select organizationid studentid parentid firstName lastName | where studentid == 32188
+open student.txt | from tsv | where lastName == open contact.txt | from tsv | select organizationid studentid parentid firstName lastName | where lastName == 'Burnett'
+open contact.txt | from tsv | select organizationid studentid parentid firstName lastName | where lastName == 'Burnett'
+open student.txt | from tsv | where lastName == 'Bagwell'
+open contact.txt | from tsv | select organizationid studentid parentid firstName lastName | where studentid == 32794
+ls
+exit
+open student.txt | from tsv | where lastName == 'Bagwell'
+open student.txt | from tsv | where lastName == 'Burnett'
+open contact.txt | from tsv | select organizationid studentid parentid firstName lastName | where studentid == 32767
+open contact.txt | from tsv | select organizationid studentid parentid firstName lastName | length
+open contact.txt | from tsv | select organizationid studentid parentid firstName lastName | where studentid == 32794
+open contact.txt | from tsv | select organizationid studentid parentid firstName lastName | where studentid in [32188, 32794, 32787]
+open contact.txt | from tsv | select organizationid studentid parentid firstName lastName | length
+open contact.txt | from tsv | select organizationid studentid parentid firstName lastName | where studentid in [32188, 32794, 32767]
+open Pal
+open Parents.csv | first 10
+ls
+open Parents.csv | length
+ls
+exitr
+exit
+open contact.txt | from tsv | first 10
+open Parent.csv | first 10
+open Parents.csv | first 10
+exit
+open Parents.csv | first 10
+open contact.txt | from tsv | first 10
+open Parents.csv | where Filler == 'P12516'
+open contact.txt | from tsv | columns
+open contact.txt | from tsv | select emailAddress1
+open contact.txt | from tsv | select mobilePhoneNumber1
+open contact.txt | from tsv | select mobilephoneNumber1
+open Parents.csv
+open Parents.csv | first 10
+open Parents.csv | columns
+open Parents.csv | select phoneNumber | first 10
+open Parents.csv | where phoneNumber == 6158385088
+open contact.txt | from tsv | where lastName == 'Sater'
+open contact.txt | from tsv | select organizationid studentid parentid firstName lastName emailAddress1 | where lastName == 'Sater'
+open contact.txt | from tsv | select organizationid studentid parentid firstName lastName emailAddress1 | where lastName == 'Winer'
+open contact.txt | from tsv | select organizationid studentid parentid firstName lastName emailAddress1 | where lastName == 'Sater'
+open Parents.csv | columns
+open contact.txt | from tsv | columns
+open contact.txt | from tsv | select homephoneNumber1
+open contact.txt | from tsv | select homephoneNumber1 | uniq
+open contact.txt | from tsv | select homephoneNumber2 | uniq
+open contact.txt | from tsv | select homephoneNumber3 | uniq
+open contact.txt | from tsv | where homephoneNumber1 == 'homephoneNumber1'
+open contact.txt | from tsv | where lastName == 'McIntyre'
+open contact.txt | from tsv | select organizationid studentid parentid firstName lastName emailAddress1 | where lastName == 'McIntyre'
+open contact.txt | from tsv | select organizationid studentid parentid firstName lastName emailAddress1 | where lastName == 'Sater'
+open Parents.csv | where lastName == 'Sater'
+open Parents.csv | where lastName == 'Ackerman'
+nvim contact.txt
+exit
+open contact.txt | from tsv | select homephoneNumber3 | uniq
+open contact.txt | from tsv | select homephoneNumber2 | uniq
+open contact.txt | from tsv | select daytimephoneNumber1 | uniq
+open contact.txt | from tsv | columns
+open contact.txt | from tsv | select mobilephoneNumber1 | uniq
+open contact.txt | from tsv | columns
+open contact.txt | from tsv | select organizationid studentid parentid firstName lastName emailAddress1 | where lastName == 'Rosibel'
+open contact.txt | from tsv | select organizationid studentid parentid firstName lastName emailAddress1 | where lastName == 'Donis'
+open contact.txt | from tsv | select organizationid studentid parentid firstName lastName emailAddress1 | where lastName == 'Urbina'
+open contact.txt | from tsv | select organizationid studentid parentid firstName lastName emailAddress1 | where lastName == 'Maxwell'
+open contact.txt | from tsv | select organizationid studentid parentid firstName lastName emailAddress1 | where lastName == 'Sathi'
+open contact.txt | from tsv | select organizationid studentid parentid firstName lastName emailAddress1 | where lastName == 'Scalone'
+open contact.txt | from tsv | select organizationid studentid parentid firstName lastName emailAddress1 | where lastName == 'Gurung'
+open contact.txt | from tsv | select organizationid studentid parentid firstName lastName emailAddress1 | where lastName == 'McNiell'
+open contact.txt | from tsv | select organizationid studentid parentid firstName lastName emailAddress1 | where lastName == 'Dunpuru'
+exit
+open contact.txt | from tsv | select organizationid studentid parentid firstName lastName emailAddress1 | where lastName == 'Akins'
+open contact.txt | from tsv | select organizationid studentid parentid firstName lastName emailAddress1 | where lastName == 'Harris'
+exit
+open contact.txt | from tsv | length
+open contact.txt | from tsv | select organizationid studentid parentid firstName lastName emailAddress1 | open contact.txt | from tsv | select organizationid studentid parentid firstName lastName | where studentid in [32188, 32794, 32787]
+open contact.txt | from tsv | select organizationid studentid parentid firstName lastName | where studentid in [32188, 32794, 32767]
+ls
+nvim
+nvim contact.txt
+wc -l contact.txt
+open `BlackBoard - Students.csv`
+open `BlackBoard - Students.csv` | first 10
+open `BlackBoard - Students.csv` | columns
+open `BlackBoard - Students.csv` | first 10
+open `BlackBoard - Students.csv` | where lastName = 'TINDOL'
+open `BlackBoard - Students.csv` | where lastName == 'TINDOL'
+exit
+open `BlackBoard - Students.csv` | where studentid == '0992643'
+open `BlackBoard - Students.csv` | first 10
+open `BlackBoard - Students.csv` | where studentid == '992643'
+open `BlackBoard - Students.csv` | where studentid == 992643
+nvim `BlackBoard - Students.csv`
+ls
+open `BlackBoard - Students.csv` | columns
+open `BlackBoard - Students.csv` | where organizationid == '014'
+open `BlackBoard - Students.csv` | where organizationid == 14
+nvim `BlackBoard - Students.csv`
+exit]
+exit
+open `BlackBoard - Students.csv` | where lastName == 'ABDELGABAR'
+exit
+exit
+open `NEISD Hotline TEST.csv`
+open `BlackBoard - Students.csv` | where lastName == 'TINDOL'
+open `BlackBoard - Students.csv` | length
+exit
+open student.txt
+open student.txt | from tsv | first 10
+open student.txt | from tsv | select preferredLanguage1ID | uniq
+open student.txt | from tsv | select address
+open student.txt | from tsv | columns
+open student.txt | from tsv | select address1 | first 10
+open student.txt | from tsv | select student_cellphone
+open student.txt | from tsv | select student_email
+open Staff.csv | length
+open staff.txt | from tsv | length
+open Staff.csv | first 10
+open staff.txt | from tsv | first 10
+open staff.txt | from tsv | columns
+exit
+open staff.tl
+open staff.txt | from tsv | columns
+open staff.txt | from tsv | first 10
+open staff.txt | from tsv | select smsNumber | unqie
+open staff.txt | from tsv | select smsNumber | uniq
+exit
+open l
+open staff.txt | from tsv | first 10
+ls
+open Staff.csv | first 10
+open staff.txt | from tsv | join (open Staff.csv) emailAddress1
+open staff.txt | from tsv | join (open Staff.csv | rename --column { emailAddress1: emailAddress }) emailAddress
+open Staff.csv | length
+open Staff.csv | select emailAddress1 | length
+open Staff.csv | select emailAddress1 | uniq | length
+open staff.txt | from tsv | select emailAddress | uniq | length
+open staff.txt | from tsv | length
+open staff.txt | from tsv | where emailAddress == ''
+open staff.txt | from tsv | where lastName == 'Johnson'
+open staff.txt | from tsv | where lastName == 'Smith'
+open staff.txt | from tsv | where lastName == 'King'
+open staff.txt | from tsv | where lastName == 'Bailey'
+open staff.txt | from tsv | where lastName == 'Michael'
+open staff.txt | from tsv | where lastName == 'James'
+open staff.txt | from tsv | where lastName == 'Bennett'
+open staff.txt | from tsv | where lastName == 'Buse'
+open staff.txt | from tsv | where lastName == 'Shaw'
+open staff.txt | from tsv | where lastName == 'Cathey'
+open staff.txt | from tsv | where lastName == 'Emerson'
+open staff.txt | from tsv | where lastName == 'Ringo'
+exit
+nvim Staff.csv
+exit
+open `BlackBoard - Students.csv` | where lastName == 'ALLEX'
+exit
+open missing_staff-1.csv
+exit
+open Staff.csv | where lastName == 'Johnson'
+open Staff.csv | where lastName == 'Anderson'
+open staff.txt | from tsv | where lastName == 'Anderson'
+open staff.txt | from tsv | where teacherid == 'ccooper'
+open Staff.csv | where teacherid == 'ccooper'
+open Staff.csv | where teacherid == '17078'
+open staff.txt | from tsv | where teacherid == '17078'
+open staff.txt | from tsv | where teacherid == '22674'
+open staff.txt | from tsv | where teacherid == 'V60'
+open staff.txt | from tsv | where teacherid == '474427'
+open staff.txt | from tsv | where teacherid == '584472'
+open staff.txt | from tsv | where teacherid == '16904'
+open staff.txt | from tsv | where teacherid =~ '16904'
+open staff.txt | from tsv | where teacherid == '16904'
+open staff.txt | from tsv | where lastName == 'Johnson'
+open staff.txt | from tsv | where teacherid == 'S16904'
+open staff.txt | from tsv | where teacherid == 'S6421'
+open staff.txt | from tsv | where teacherid == 'jburnett'
+open staff.txt | from tsv | where teacherid == '745'
+open staff.txt | from tsv | where teacherid == '17078'
+open staff.txt | from tsv | where teacherid == '22674'
+open staff.txt | from tsv | where teacherid == '22968'
+open staff.txt | from tsv | where teacherid == '74108'
+open staff.txt | from tsv | where teacherid == '15246'
+open staff.txt | from tsv | where teacherid == '187242'
+open staff.txt | from tsv | where lastName == 'Maddux'
+open staff.txt | from tsv | where lastName == 'Smith'
+open staff.txt | from tsv | where lastName == 'Angela'
+open staff.txt | from tsv | where lastName == 'King'
+open staff.txt | from tsv | where lastName == 'Frazier'
+exit
+open staff.txt | from tsv | where lastName == 'Smith'
+open staff.txt | from tsv | where lastName == 'King'
+open staff.txt | from tsv | where lastName == 'Frazier'
+exit
+clear
+ls
+open `BlackBoard - Parents.csv` | first 10
+open `BlackBoard - Parents.csv` | where studentid == 1059726
+exit
+open results.txt
+open results.txt | from tsv | first 10
+exit
+open results.txt | from tsv | first 10
+exit
+open results.txt | from tsv | length
+open results.txt | from tsv | uniq --repeated
+exit
+open results.txt | from tsv | uniq --repeated
+exit
+open results.txt | from tsv | uniq --repeated
+open results.txt | from tsv
+exit
+open results.txt | from tsv
+nvim results.txt
+exit
+open results.txt | from tsv
+open results.txt | from tsv | uniq --repeated
+open results.txt | from tsv | select organizationid teacherid
+open results.txt | from tsv | select organizationid teacherid | uniq --repeated
+exit
+open results.txt | from tsv | select organizationid teacherid | uniq --repeated
+cd ..
+exit
+open results.txt | from tsv | select organizationid teacherid | uniq --repeated
+exit
+op
+open results.txt | from tsv | select organizationid teacherid | uniq --repeated
+nvim results.txt
+cd ..
+exit
+op
+open results.txt | from tsv | select organizationid teacherid | uniq --repeated
+exit
+open results.txt | from tsv | select organizationid teacherid | uniq --repeated
+open results.txt | from tsv | select organizationid teacherid | first 10
+open student.txt | from tsv | first 10
+open student.txt | from tsv | select student_email
+open student.txt | from tsv | col
+open student.txt | from tsv | columns
+open student.txt | from tsv | select emailAddress
+open student.txt | from tsv | where emailAddress == ''
+open student.txt | from tsv | len
+open student.txt | from tsv | length
+exit
+open Students.csv | length
+open student.txt | from tsv | length
+:q
+exit
+exit
+ls
+exit
+open parents.csv | first 10
+open parents.csv
+exit
+open results.txt
+open results.txt | from tsv
+open results.txt | from csv
+open results.txt | from csv | columns
+exit
+open results.txt | from csv | columns
+open results.txt | from csv | first 10
+exit
+open parent.txt | from tsv | first 10
+ls
+open contact.txt | from tsv | first 10
+open contact.txt | from tsv | columns
+exit
+cd results/
+open results.txt | from csv | select ImportID, RoleID
+open results.txt | from csv | select ImportID
+open results.txt | from csv | select ImportID, RoleID
+open results.txt | from csv | columns
+open results.txt | from csv | select ImportID RoleID
+open results.txt | from csv | first 10
+open course.txt | from tsv | first 10
+open course.txt | from tsv | where name == 'Math' and organizationid == 100
+open section.txt | from tsv | first 10
+open section.txt | from tsv | join (open course.txt | from tsv | where name == 'Math' and organizationid == 100) courseid
+open section.txt | from tsv | join (open course.txt | from tsv | where name == 'KK Language Arts' and organizationid == 100) courseid
+open section.txt | from tsv | join (open course.txt | from tsv | where name == 'KK Language Arts') courseid
+open course.txt | from tsv | select name | unqi
+open course.txt | from tsv | select name | uniq
+open course.txt | from tsv | select name | uniq | where name =~ 'KK'
+open section.txt | from tsv | join (open course.txt | from tsv | where name == 'KK Language Arts') courseid
+open section.txt | from tsv | first 10
+exit
+open schedule.txt
+open schedule.txt | from tsv | first 10
+open schedule.txt | from tsv | join (open student.txt | from tsv) studentid
+open schedule.txt | from tsv | join (open student.txt | from tsv) studentid | select studentid | uniq
+open section.txt | from tsv | join (open course.txt | from tsv | where name == 'Math' and organizationid == 100) courseid
+open section.txt | from tsv | join (open course.txt | from tsv | where organizationid == 100) courseid | where teacherid == 25449
+open schedule.txt | from tsv | join (open section.txt | from tsv | join (open course.txt | from tsv | where organizationid == 100) courseid | where teacherid == 25449)) sectionid
+open schedule.txt | from tsv | join (open section.txt | from tsv | join (open course.txt | from tsv | where organizationid == 100) courseid | where teacherid == 25449) sectionid
+open schedule.txt | from tsv | first 10
+open schedule.txt | from tsv | join (open section.txt | from tsv | join (open course.txt | from tsv | where organizationid == 100)) sectionid
+open schedule.txt | from tsv | join (open section.txt | from tsv | join (open course.txt | from tsv | where organizationid == 100) courseid) sectionid
+open schedule.txt | from tsv | join (open section.txt | from tsv | join (open course.txt | from tsv | where organizationid == 100) courseid) sectionid | columns
+open schedule.txt | from tsv | join (open section.txt | from tsv | join (open course.txt | from tsv | where organizationid == 100) courseid) sectionid | select organizationid studentid sectionid courseid period termid teacherid
+open schedule.txt | from tsv | join (open section.txt | from tsv | join (open course.txt | from tsv | where organizationid == 100) courseid) sectionid | columns
+open schedule.txt | from tsv | join (open section.txt | from tsv | join (open course.txt | from tsv | where organizationid == 100) courseid) sectionid | select organizationid studentid sectionid courseid period termid teacherid startDate endDate
+exit
+open schedule.txt | from tsv | length
+open daily.txt | from tsv | length
+ls
+rm daily.txt
+mv daily_1.txt daily.txt
+open daily.txt | from tsv | length
+open daily.txt | from tsv
+open history.txt | from tsv | length
+rm history.txt
+exit
+open history.txt | from tsv | length
+open results.txt | from tsv | first 10
+open results.txt | from tsv | group-by 8
+open results.txt | from tsv | group-by '8'
+open results.txt | from tsv | group-by '8' | update count {get items | length}
+open results.txt | from tsv | group-by '8' | uniq-by --count
+open results.txt | from tsv | group-by '8' | length
+open results.txt | from tsv | group-by '8'
+open results.txt | from tsv | group-by '8' | aggregate '8'
+use std-rfc/tables aggregate
+open results.txt | from tsv | group-by '8' | aggregate '8'
+open results.txt | from tsv | write db
+open results.txt | from tsv | into sqlite results.db
+open results.txt | from tsv | into sqlite results.db -t results
+open results.txt | from tsv
+open results.txt | from tsv | into sqlite results.db
+exit
+open results.txt | from tsv | into sqlite results.db
+ls
+rm results.db
+open results.txt | from tsv | into sqlite results.db -t results
+ls
+rm results.db
+open results.txt | from tsv | into sqlite results.db -t results
+open results.txt | from tsv
+open results.txt | from tsv | rename 8 RoleId
+open results.txt | from tsv | rename 8 RoleID | into sqlite results.db -t results
+open results.txt | from tsv | rename '8' RoleId
+open results.txt | from tsv 
+open results.txt | from tsv | rename --column {'8': 'RoleID'}
+open results.txt | from tsv | rename --column {'8': 'RoleID'} | into sqlite result.db -t results
+exit
+open results.txt | from tsv | rename --column {'8': 'RoleID'} | into sqlite result.db -t results
+ls | into sqlite my_ls.db
+rm my_ls.db
+open results.txt | from tsv | rename --column {'8': 'RoleID'} | into sqlite result.db -t results
+open results.txt | from tsv | rename --column {'8': 'RoleID'} | into sqlite result.db
+rm result.db
+open results.txt | from tsv | rename --column {'8': 'RoleID'} | into sqlite result.db
+rm result.db
+open results.txt | from tsv | rename --column {'8': 'RoleID'}
+open results.txt | from tsv | rename --column {'8': 'RoleID'} | into sqlite result.db | debug
+rm result.db
+nvim results.txt
+open results.txt | from tsv | into sqlite results.db -t results
+nvim results.txt
+open results.txt | from tsv | save results.json
+open results.json
+open results.json | into sqlite results.db
+open results.json | into sqlite results.db -t results
+open results.db | query db "SELECT COUNT(*) FROM results GROUP BY RoleID"
+open results.db | query db "SELECT RoleID, COUNT(*) FROM results GROUP BY RoleID"
+exit
+ls
+exit
+open parent.txt | from tsv | first 10
+open contact.txt | from tsv | first 10
+open contact.txt | from tsv | where firstName == 'Shannon'
+open contact.txt | from tsv | where firstName == 'Shannon' and lastName == 'McKinney-Freeman'
+exit
+open contact.txt | from tsv | where firstName == 'Shannon' and lastName == 'McKinney-Freeman'
+open student.txt | from tsv | where studentid == 5511
+open student.txt | from tsv | where studentid == 30114
+nvim student.txt
+open Staff.csv | select organizationid | uniq
+open contact.txt | from tsv | where parentid == 26809 
+exit
+open contact.txt | from tsv | where parentid == 26809 
+open contact.txt | from tsv | where parentid == 10362
+open Parents.csv | first 10
+open Parents.csv | where Filler == '10362'
+open Parents.csv | where Filler == 'P10362'
+open Parents.csv | where Filler == 'P12373'
+exit
+open Parents.csv
+open Parents.csv | first 10
+open Students.csv | where studentid == 2352
+open Parents.csv | where studentid == 2352
+open Parents.csv | where studentid == 1645
+open Parents.csv | where studentid == 1813
+clear
+open Students.csv | where studentid == 2352
+open Parents.csv | where studentid == 2352
+open Parents.csv | where parentid == 2352
+exit
+open contact.txt | from tsv | columns
+open contact.txt | from tsv | where parentid == 25188
+open contact.txt | from tsv | where parentid in [25188, 6250]
+open contact.txt | from tsv | where parentid in [6254, 25800]
+exit
+open contact.txt | from tsv | where emailAddress2 != ''
+open contact.txt | from tsv | select organizationid studentid parentid firstName lastName emailAddress1 emailAddress2 | where emailAddress2 != ''
+open contact.txt | from tsv | select organizationid studentid parentid firstName lastName emailAddress1 emailAddress2 | where emailAddress2 != '' | save-as contacts-email2.txt
+open contact.txt | from tsv | select organizationid studentid parentid firstName lastName emailAddress1 emailAddress2 | where emailAddress2 != '' | save contacts-email2.txt
+open contact.txt | from tsv | select organizationid studentid parentid firstName lastName emailAddress1 emailAddress2 | where emailAddress2 != '' | save-to >  contacts-email2.txt
+open contact.txt | from tsv | select organizationid studentid parentid firstName lastName emailAddress1 emailAddress2 | where emailAddress2 != '' | save contacts-email2.txt
+open contact.txt | from tsv | select organizationid studentid parentid firstName lastName emailAddress1 emailAddress2 | where emailAddress2 != '' | save contacts-email2.csv
+open contacts-email2.csv
+nvim contacts-email2.csv
+ls
+exit
+open contacts-email2.csv | first 10
+ls
+open `Blackboard Export - Parents - GrandviewSD200.csv`
+nvim `Blackboard Export - Parents - GrandviewSD200.csv`
+op
+open `Blackboard Export - Parents - GrandviewSD200.csv`
+nvim `Blackboard Export - Parents - GrandviewSD200.csv`
+open `Blackboard Export - Parents - GrandviewSD200.csv`
+open `Blackboard Export - Student-GrandviewSD200.csv`
+open `Blackboard Export - Student-GrandviewSD200.csv` | where studentid == 0860131
+open `Blackboard Export - Parents - GrandviewSD200.csv` | where studentid == 0860131
+open `Blackboard Export - Parents - GrandviewSD200.csv` | where organizationid == 406
+open `Blackboard Export - Parents - GrandviewSD200.csv` | where organizationid == 405
+open parent.txt | from tsv | first 10
+open parent.txt | from tsv | where parentid == 'P119215'
+exit
+open parent.txt | from tsv | where parentid == 'P119215'
+exit
+open testcontact.txt
+open testcontact.txt | from tsv | first 10
+exit
+open contact.txt | from tsv | length
+open testcontact.txt | from tsv | length
+open contact.txt | from tsv | where lastName == 'Coburn'
+open contact.txt | from tsv | select organizationid studentid parentid firstName lastName emailAddress1 priorityByStudent
+open contact.txt | from tsv | select organizationid studentid parentid firstName lastName emailAddress1 priorityByStudent | where lastName == 'Coburn'
+exit
+open t
+open testcontact.txt | from tsv | length
+open testcontact.txt | from tsv | where lastName == 'Coburn'
+open testcontact.txt | from tsv | select organizationid studentid parentid firstname lastName priorityByStudent isActive
+open testcontact.txt | from tsv | select organizationid studentid parentid firstName lastName priorityByStudent isActive | where lastname == 'Coburn'
+open testcontact.txt | from tsv | select organizationid studentid parentid firstName lastName priorityByStudent isActive | where lastName == 'Coburn'
+open testcontact.txt | from tsv | select organizationid studentid parentid firstName lastName priorityByStudent isActive | where lastName == 'Fields'
+open testcontact.txt | from tsv | select organizationid studentid parentid firstName lastName priorityByStudent isActive | where firstName == 'Rebekah'
+exit
+open contact.txt | from tsv | select organizationid studentid parentid firstName lastName emailAddress1 priorityByStudent | where lastName == 'Coburn'
+ls
+exit
+open contact.txt | from tsv | select organizationid studentid parentid firstName lastName emailAddress1 phoneNumber priorityByStudent | where lastName == 'Coburn'
+open contact.txt | from tsv | select organizationid studentid parentid firstName lastName emailAddress1 homephoneNumber1 priorityByStudent | where lastName == 'Coburn'
+open contact.txt | from tsv | select organizationid studentid parentid firstName lastName emailAddress1 homephoneNumber1 mobiplephoneNumber 1priorityByStudent | where lastName == 'Coburn'
+open contact.txt | from tsv | select organizationid studentid parentid firstName lastName emailAddress1 homephoneNumber1 mobiplephoneNumber1 priorityByStudent | where lastName == 'Coburn'
+open contact.txt | from tsv | select organizationid studentid parentid firstName lastName emailAddress1 homephoneNumber1 mobilephoneNumber1 priorityByStudent | where lastName == 'Coburn'
+exit
+open GermantownExportResults.csv | first 10
+open GermantownExportResults.csv | where "Bus ID" in [30825, 30169]
+exit
+ls
+exit
+open sections.csv | first 10
+open staff.csv | first 10
+open staff.csv | where teacherid == 65265
+open staff.csv | where teacherid == 6526
+open courses.csv | first 10
+open courses.csv | where courseid == 10111
+open schedules-sep-2.csv | first 5
+open schedules-sep-2.csv | where sectionid == '010111:2'
+open sections.csv | first 5
+open sections.csv | where courseid == 10111
+open sections.csv | where courseid == 10000
+open schedules-sep-2.csv | where studentid == 72064
+open sections.csv | where sectionid == '905300:1'
+open student.txt | from tsv | first 10
+open student.txt | from tsv | where alternativePlacement 
+open student.txt | from tsv | where alternativePlacement !+ ""
+open student.txt | from tsv | where alternativePlacement != ""
+open student.txt | from tsv | where alternativePlacement != "" | select organizationid studentid lastName firstName alternativePlacement
+ls
+open Schedule.csv | first 5
+open Schedule.csv | each { to-url } | rename url
+open Schedule.csv | select 0
+nvim Schedule.csv
+exit
+open Schedule.csv | first 10
+open Schedule.csv | where studentid == 200063885
+nvim Section.csv
+open Section.csv | where sectionid == 1972092
+ls
+nvim Courses.csv
+open Courses.csv | where courseid == 300663
+open Schedule.csv | where studentid == 200065722
+open Schedule.csv | where studentid == 200065849
+exit
+open Section.csv | first 10
+open Terms.csv | first 10
+open Schedule.csv | where studentid == 200065849
+open Section.csv | where sectionid == 1972092
+open Terms.csv | where termid == 4453
+open Terms.csv | where termid == 4454
+open Terms.csv | where termid == 4455
+open courses.csv | where courseid == 10111
+open Courses.csv | where courseid == 300663
+exit
+open Terms.csv | where termid == 4453
+ls
+cd ..
+exit
+open student.txt | from tsv | columns
+open contact.txt | from tsv | columns
+exit
+open results.txt | from tsv | first 10
+exit
+open 
+open results.txt | from tsv | first 10
+exit
+open results.txt | from tsv | first 10
+cd results/
+open results.txt | from tsv | first 10
+exit
+open results.txt | from tsv | first 10
+open results.txt | from tsv | select groupname, groupid | uniq
+open results.txt | from tsv | select groupname groupid | uniq
+exit
+open results.txt | from tsv | first 10
+open results.txt | from tsv | columns
+exit
+open contact.txt | from tsv | columns
+nvim contact.txt
+cd ..
+exxit
+exit
+cd results/
+ls
+open contact.txt | from tsv | columns
+open re
+open results.txt | from tsv | columns
+ls
+exit
+open results.txt | from tsv
+exit
+ls
+open Section.csv | where sectionid == 1972092
+open Section.test.csv | where sectionid == 19720920
+open Section.csv | where sectionid == 1972092
+open Courses.csv | where courseid == 300663
+open Section.csv | where courseid == 300663
+open Schedule.csv | where studentid == 200065849
+ls
+open Schedule.csv | where studentid == 200063885
+diff 
+diff Section.csv Section.test.csv
+open Section.csv | where sectionid == 1972092
+open Terms.csv | where termid == 4453
+open Terms.csv | where termid == 4455
+open Terms.csv | where termid == 4454
+open student.txt | from tsv | first 10
+open student.txt | from tsv | where studentid == 720011976
+open student.txt | from tsv | select phoneNumber | uniq
+open student.txt | from tsv | where studentid == 720011976
+open student.txt | from tsv | where studentid == 720010935
+exit
+ls
+open staff.txt | from tsv | where teacherid == 10389
+open staff.txt | from tsv | columns
+nvim staff.txt
+open staff.txt | from tsv | columns
+open staff.txt | from tsv
+nvim staff.txt
+open staff.txt | from tsv 
+open staff.txt | from tsv | columns
+open staff.txt | from tsv | where 1953 == 10389
+open staff.txt | from tsv | where REYES == 'STEHN'
+open staff.txt | from tsv | where '1953' == 10389
+ls
+open section.txt | from tsv | columns
+open section.txt | from tsv | first 10
+open section.txt | from tsv | where '22904' == 10389
+open section.txt | from tsv | where '19634' == 10389
+nvim section.txt
+open section.txt | from tsv | where '19634' == 10948
+open section.txt | from tsv | where '19634' == 10389
+nvim section.txt
+exit
+open contact.txt
+open contact.txt | from tsv | first 10
+open contact.txt | from tsv | columns
+open contact.txt | from tsv | where lastName == 'Harishkumar'
+open contact.txt | from tsv | where firstName == 'Harishkumar'
+open contact.txt | from tsv | select preferredLanguage1ID | uniq
+open contact.txt | from tsv | select preferredLanguage1ID | uniq | sort
+open contact.txt | from tsv | where preferredLanguage1ID == 80858
+open contact.txt | from tsv | where preferredLanguage1ID == 80873
+open contact.txt | from tsv | where preferredLanguage1ID == 80883
+open contact.txt | from tsv | select preferredLanguage1ID | uniq | sort
+open contact.txt | from tsv | first 10
+exit

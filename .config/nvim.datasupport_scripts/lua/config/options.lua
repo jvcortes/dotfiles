@@ -6,7 +6,7 @@ vim.g.netrw_nogx = false
 vim.keymap.set('n', '<leader>rw', vim.cmd.Ex)
 vim.keymap.set('i', 'jk', '<Esc>')
 
-vim.wo.fillchars='eob: '
+vim.wo.fillchars = 'eob: '
 
 vim.opt.relativenumber = true
 vim.opt.tabstop = 4
@@ -23,3 +23,4 @@ vim.opt.termguicolors = true
 vim.opt.scrolloff = 10
 vim.opt.colorcolumn = '80'
 vim.opt.exrc = true
+vim.opt.backupcopy = 'yes'

@@ -29,7 +29,7 @@ return {
 		conform.setup({
 			formatters_by_ft = {
 				lua = { "stylua" },
-				python = { "isort", "ruff_fix", "ruff_format" },
+				python = { "isort", "ruff_format", "ruff_fix" },
 				markdown = { "prettierd", "prettier", stop_after_first = true },
 			},
 			-- Set default options

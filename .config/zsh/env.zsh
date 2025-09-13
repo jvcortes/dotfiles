@@ -1,7 +1,7 @@
 export EDITOR="$(which nvim)"
 export VISUAL="$(which nvim)"
 export BROWSER="$(which firefox)"
-export PATH="$HOME/scripts:$HOME/.local/bin:$HOME/.node_modules/bin:$HOME/.go/bin:$HOME/.pyenv/bin:$HOME/.cargo/bin:$HOME/.config/emacs/bin:$PATH"
+export PATH="$HOME/scripts:$HOME/.local/bin:$HOME/.node_modules/bin:$HOME/.go/bin:$HOME/.pyenv/bin:$HOME/.cargo/bin:$HOME/.config/emacs/bin:$HOME/.config/scan/scripts/:$PATH"
 export NVIM_APPNAME='nvim'
 
 export npm_config_prefix=~/.node_modules
