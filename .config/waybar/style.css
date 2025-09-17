@@ -1,4 +1,4 @@
-@import './colorschemes/rose-pine.css';
+@import './colors.css';
 
 
 @define-color background shade(@base, 0.87);
@@ -10,7 +10,7 @@
 
 
 window#waybar { 
-    background-color: @black; 
+    background-color: @background-alt; 
     color: @foreground;    
 }
 
@@ -62,7 +62,7 @@ window#waybar {
 
 #window {
 	 color: @foreground;
-	 background-color: @black;
+	 background-color: @background-alt;
      padding: 0px 10px 0px 10px;
 }
 

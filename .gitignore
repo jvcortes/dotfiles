@@ -1,1 +1,3 @@
 *lazy-lock.json
+secrets.zsh
+.config/tmux/plugins/*

@@ -21,8 +21,8 @@
 ;; See 'C-h v doom-font' for documentation and more examples of what they
 ;; accept. For example:
 ;;
-(setq doom-font (font-spec :family "FantasqueSansM Nerd Font Mono" :size 13)
-      doom-variable-pitch-font (font-spec :family "Noto Sans" :size 13))
+(setq doom-font (font-spec :family "DepartureMono Nerd Font Mono" :size 11)
+      doom-variable-pitch-font (font-spec :family "Noto Sans" :size 12))
 ;;
 ;; If you or Emacs can't find your font, use 'M-x describe-font' to look them
 ;; up, `M-x eval-region' to execute elisp code, and 'M-x doom/reload-font' to
@@ -32,7 +32,7 @@
 ;; There are two ways to load a theme. Both assume the theme is installed and
 ;; available. You can either set `doom-theme' or manually load a theme with the
 ;; `load-theme' function. This is the default:
-(setq doom-theme 'doom-rose-pine)
+(setq doom-theme 'doom-tokyo-night)
 
 ;; This determines the style of line numbers in effect. If set to `nil', line
 ;; numbers are disabled. For relative line numbers, set this to `relative'.
@@ -76,6 +76,7 @@
 ;;
 
 ;; -- global settings
+(add-to-list 'default-frame-alist '(alpha . 97))
 ;;
 ;; -> packages
 
@@ -94,7 +95,6 @@
 (setq org-startup-with-latex-preview t)
 (setq org-hidden-keywords '(title author email))
 (setq org-startup-with-inline-images t)
-(setq org-hide-drawer-startup nil)
 (setq org-cycle-hide-drawer-startup t)
 (setq org-cycle-separator-lines 2)
 (setq line-spacing 0.2)

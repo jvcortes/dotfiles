@@ -1,4 +1,4 @@
-znap source Aloxaf/fzf-tab
+zcomet load Aloxaf/fzf-tab
 
 zstyle ':completion:*:git-checkout:*' sort false
 zstyle ':fzf-tab:*' fzf-bindings 'ctrl-space:toggle+down'
