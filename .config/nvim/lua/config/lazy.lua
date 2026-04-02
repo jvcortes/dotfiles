@@ -16,7 +16,7 @@ require('lazy').setup({
   {import = 'plugins'},
   {import = 'plugins.lsp'}},
   {
-    install = { colorscheme = { 'tokyonight-night' } },
+    install = { colorscheme = { 'rose-pine-moon' } },
     -- defaults = { lazy = true },
     ui = {
       border = 'rounded',

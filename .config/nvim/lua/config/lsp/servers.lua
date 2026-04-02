@@ -21,6 +21,7 @@ return {
       {
         name = 'basedpyright',
         config = {
+          cmd = { "uv", "run", "basedpyright-langserver", "--stdio" },
           settings = {
             basedpyright = {
               analysis = {

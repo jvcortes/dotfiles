@@ -22,7 +22,7 @@ return {
 			autopairs = { enable = true },
 			autotag = { enable = true },
 			indent = { enable = false },
-			ensure_installed = { 'python', 'markdown', 'json', 'sql' },
+			ensure_installed = { 'python', 'markdown', 'json', 'sql', 'xml' },
 			ignore_install = { 'org' },
 			sync_install = true,
 			auto_install = false,

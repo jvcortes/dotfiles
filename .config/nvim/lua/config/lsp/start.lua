@@ -25,9 +25,9 @@ for lang, config in pairs(servers) do
 	end
 
 	if server_config then
-		lspconfig[server_name].setup(server_config)
+		vim.lsp.config(server_name, server_config)
+		vim.lsp.enable(server_name)
 	end
-	vim.cmd('LspStart')
 end
 
 vim.diagnostic.config({
