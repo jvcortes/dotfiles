@@ -11,14 +11,18 @@ return {
     },
   },
   { "Bilal2453/luvit-meta", lazy = true }, -- optional `vim.uv` typings
-  { -- optional completion source for require statements and module annotations
-    "hrsh7th/nvim-cmp",
+  {
+    "saghen/blink.cmp",
     opts = function(_, opts)
       opts.sources = opts.sources or {}
-      table.insert(opts.sources, {
-        name = "lazydev",
-        group_index = 0, -- set group index to 0 to skip loading LuaLS completions
-      })
+      opts.sources.per_filetype = opts.sources.per_filetype or {}
+      opts.sources.per_filetype.lua = { inherit_defaults = true, "lazydev" }
+      opts.sources.providers = opts.sources.providers or {}
+      opts.sources.providers.lazydev = {
+        name = "LazyDev",
+        module = "lazydev.integrations.blink",
+        score_offset = 100,
+      }
     end,
   },
 }

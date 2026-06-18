@@ -37,20 +37,34 @@ return {
         name = 'pylsp',
         config = {}
       },
+    }
+  },
+  typescript = {
+    use = 'vtsls',
+    servers = {
       {
-        name = 'pyls',
+        name = 'vtsls',
         config = {
           settings = {
-            pyls = {
-              plugins = {
-                pycodestyle = {
-                  enabled = true
-                },
-              }
-            }
-          }
-        }
+            vtsls = {
+              autoUseWorkspaceTsdk = true,
+            },
+            typescript = {
+              tsserver = {
+                maxTsServerMemory = 4096,
+              },
+            },
+          },
+        },
       },
-    }
-  }
+      {
+        name = 'ts_ls',
+        config = {},
+      },
+      {
+        name = 'tsgo',
+        config = {},
+      },
+    },
+  },
 }
