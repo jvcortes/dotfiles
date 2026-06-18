@@ -1,6 +1,6 @@
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 
-if not vim.loop.fs_stat(lazypath) then
+if not vim.uv.fs_stat(lazypath) then
   vim.fn.system({
     "git",
     "clone",
@@ -16,7 +16,7 @@ require('lazy').setup({
   {import = 'plugins'},
   {import = 'plugins.lsp'}},
   {
-    install = { colorscheme = { 'tokyonight-night' } },
+    install = { colorscheme = { 'rose-pine-moon' } },
     -- defaults = { lazy = true },
     ui = {
       border = 'rounded',
