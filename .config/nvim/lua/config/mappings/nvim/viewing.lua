@@ -31,4 +31,4 @@ vim.keymap.set("n", "<leader><C-x>", function()
 	else
 		print("Path is not valid or doesn't exist.")
 	end
-end)
+end, { desc = 'Open image viewer' })

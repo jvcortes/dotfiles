@@ -28,25 +28,38 @@ return {
 		local conform = require('conform')
 
 		-- Global defaults; override per project in .nvim.lua.
+		-- These are looked up at format time, not only once at startup,
+		-- so project-local .nvim.lua values work reliably.
 		-- Example project-level override:
 		--   -- .nvim.lua
 		--   vim.g.conform_python_formatters = { "ruff_fix", "ruff_format" }
 		--   vim.g.conform_lua_formatters = { "stylua" }
 		--   vim.g.conform_markdown_formatters = { "prettierd" }
+		--   vim.g.conform_typescript_formatters = { "biome" }
 		--
 		--   -- Or disable formatting for a filetype in this project:
 		--   vim.g.conform_python_formatters = {}
 		--
 		-- You can also switch Python projects to isort+ruff when needed:
 		--   vim.g.conform_python_formatters = { "isort", "ruff_fix", "ruff_format" }
+		local function project_or_default(global_name, default)
+			return function()
+				local value = vim.g[global_name]
+				if value ~= nil then
+					return value
+				end
+				return default
+			end
+		end
+
 		local formatters_by_ft = {
-			lua = vim.g.conform_lua_formatters or { "stylua" },
-			python = vim.g.conform_python_formatters or { "isort", "ruff_fix", "ruff_format" },
-			markdown = vim.g.conform_markdown_formatters or { "prettierd", stop_after_first = true },
-			javascript = vim.g.conform_javascript_formatters or { "prettierd", stop_after_first = true },
-			typescript = vim.g.conform_typescript_formatters or { "prettierd", stop_after_first = true },
-			javascriptreact = vim.g.conform_javascriptreact_formatters or { "prettierd", stop_after_first = true },
-			typescriptreact = vim.g.conform_typescriptreact_formatters or { "prettierd", stop_after_first = true },
+			lua = project_or_default("conform_lua_formatters", { "stylua" }),
+			python = project_or_default("conform_python_formatters", { "isort", "ruff_fix", "ruff_format" }),
+			markdown = project_or_default("conform_markdown_formatters", { "prettierd", stop_after_first = true }),
+			javascript = project_or_default("conform_javascript_formatters", { "prettierd", stop_after_first = true }),
+			typescript = project_or_default("conform_typescript_formatters", { "prettierd", stop_after_first = true }),
+			javascriptreact = project_or_default("conform_javascriptreact_formatters", { "prettierd", stop_after_first = true }),
+			typescriptreact = project_or_default("conform_typescriptreact_formatters", { "prettierd", stop_after_first = true }),
 		}
 
 		conform.setup({
